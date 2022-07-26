@@ -1,3 +1,105 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;600;700&display=swap");
+
+@mixin displayFlex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  height: 100vh;
+  overflow: hidden;
+  background: linear-gradient(
+      181.06deg,
+      rgba(0, 0, 0, 0.2) 0.91%,
+      rgba(255, 255, 255, 0) 116.71%,
+      rgba(255, 255, 255, 0) 116.72%
+    ),
+    #c4c4c4;
+  background-image: url("/Rectangle.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.container {
+  padding: 60px 40px;
+}
+
+.hero {
+  height: 100vh;
+  color: white;
+}
+
+ul {
+  list-style: none;
+}
+
+//Navigation bar
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 40px;
+
+  .logo,
+  .links-list {
+    @include displayFlex();
+  }
+
+  .list-item a {
+    text-decoration: none;
+    color: white;
+  }
+
+  .list-item {
+    margin: 0 15px;
+  }
+}
+
+// hamburger menu
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  border-radius: 3px;
+  background-color: white;
+  transition: all 0.3s;
+}
+
+.hamburger-menu .active .bar--2 {
+  opacity: 0;
+}
+.hamburger-menu .active .bar--1 {
+  transform: translateY(8px) rotate(45deg);
+}
+.hamburger-menu .active .bar--1 {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+.hamburger-menu {
+  display: none;
+}
+
+// h1
+
+h1 {
+  text-align: center;
+  font-size: 220px;
+  font-weight: 700;
+  line-height: 100px;
+
+  small {
+    font-size: 30px;
+    font-weight: 300;
+    letter-spacing: 8px;
+  }
 }
