@@ -1,35 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;600;700&display=swap");
-* {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  font-family: "Montserrat", sans-serif;
-  height: 100vh;
-  overflow: hidden;
-  background: linear-gradient(181.06deg, rgba(0, 0, 0, 0.2) 0.91%, rgba(255, 255, 255, 0) 116.71%, rgba(255, 255, 255, 0) 116.72%), #c4c4c4;
-  background-image: url("/Rectangle.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.container {
-  padding: 40px 50px;
-}
-
-.hero {
-  height: 100vh;
-  color: white;
-}
-
-ul {
-  list-style: none;
-}
-
-.navbar {
+@import url("https://fonts.googleapis.com/css2?family=Albert+Sans:wght@400;500;600;700&display=swap");
+.main-navbar {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -39,28 +9,50 @@ ul {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
-.navbar .logo,
-.navbar .links-list {
+.menu-list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
-.navbar .list-item a {
+.menu-list .menu-item {
+  margin: 0 18px;
+}
+
+.menu-list .menu-item a {
   text-decoration: none;
   color: white;
 }
 
-.navbar .list-item {
-  margin: 0 15px;
+.menu-list .menu-item a:hover {
+  border-bottom: 2px solid white;
+}
+
+.menu-list .menu-item a:active {
+  color: wheat;
+  border-bottom: 2px solid wheat;
+}
+
+.logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.logo .logo-text {
+  font-weight: 500;
+  letter-spacing: 3px;
+  margin: 0;
 }
 
 .bar {
@@ -92,6 +84,77 @@ ul {
   display: none;
 }
 
+@media (max-width: 1000px) {
+  .hamburger-menu {
+    display: block;
+  }
+  .links {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 50vw;
+    background-color: wheat;
+    z-index: 200;
+  }
+  .links .menu-list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-top: 50px;
+  }
+  .links .menu-item {
+    padding: 30px 20px 10px;
+    text-transform: uppercase;
+  }
+  .links .menu-item a {
+    color: black;
+    font-size: 18px;
+  }
+  .links .menu-item a:hover {
+    border-bottom: black;
+  }
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  overflow: hidden;
+  font-family: "Albert Sans", sans-serif;
+  font-size: clamp(0.8rem, 1.17vw, 0.9rem);
+}
+
+.container {
+  width: 100%;
+  padding: 40px 30px;
+}
+
+.hero-video video {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  z-index: -2;
+}
+
+.hero {
+  color: white;
+}
+
+ul {
+  list-style: none;
+}
+
 .hero-title {
   text-align: center;
   padding: 100px;
@@ -99,8 +162,10 @@ ul {
 
 .hero-title h1 {
   text-align: center;
-  font-size: 250px;
+  font-size: clamp(5rem, 12vw, 18rem);
   font-weight: 700;
+  color: transparent;
+  -webkit-text-stroke: 4px white;
 }
 
 .hero-title .small-title {
@@ -108,21 +173,10 @@ ul {
   font-size: 30px;
   font-weight: 300;
   letter-spacing: 8px;
+  margin: 0;
 }
 
 .hero-destinations {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.hero-destinations .destination {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -132,16 +186,29 @@ ul {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  gap: 60px;
+  padding-top: 60px;
+}
+
+.hero-destinations .destination {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   gap: 10px;
   background-color: rgba(255, 255, 255, 0.1);
   padding: 10px 100px 10px 20px;
   border-radius: 5px;
   -webkit-backdrop-filter: blur(1px);
           backdrop-filter: blur(1px);
+  line-height: 1rem;
 }
 
 .hero-destinations .destination small {
-  color: #c4c4c4;
+  opacity: 0.5;
+}
+
+.hero-destinations .destination-city {
+  margin: 0;
 }
 
 .hero-see_more {
