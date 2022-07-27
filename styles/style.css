@@ -47,6 +47,7 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  cursor: pointer;
 }
 
 .logo .logo-text {
@@ -62,26 +63,24 @@
   margin: 5px auto;
   border-radius: 3px;
   background-color: white;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-}
-
-.hamburger-menu .active .bar--2 {
-  opacity: 0;
-}
-
-.hamburger-menu .active .bar--1 {
-  -webkit-transform: translateY(8px) rotate(45deg);
-          transform: translateY(8px) rotate(45deg);
-}
-
-.hamburger-menu .active .bar--1 {
-  -webkit-transform: translateY(-8px) rotate(-45deg);
-          transform: translateY(-8px) rotate(-45deg);
 }
 
 .hamburger-menu {
   display: none;
+}
+
+.overlay {
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 2;
+  cursor: pointer;
 }
 
 @media (max-width: 1000px) {
@@ -96,6 +95,10 @@
     width: 50vw;
     background-color: wheat;
     z-index: 200;
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+    -webkit-transition: ease-in-out 0.3s;
+    transition: ease-in-out 0.3s;
   }
   .links .menu-list {
     -webkit-box-orient: vertical;
@@ -126,7 +129,6 @@
 
 body {
   height: 100vh;
-  overflow: hidden;
   font-family: "Albert Sans", sans-serif;
   font-size: clamp(0.8rem, 1.17vw, 0.9rem);
 }
@@ -162,7 +164,7 @@ ul {
 
 .hero-title h1 {
   text-align: center;
-  font-size: clamp(5rem, 12vw, 18rem);
+  font-size: clamp(3rem, 12vw, 18rem);
   font-weight: 700;
   color: transparent;
   -webkit-text-stroke: 4px white;
@@ -170,7 +172,7 @@ ul {
 
 .hero-title .small-title {
   text-align: center;
-  font-size: 30px;
+  font-size: clamp(1rem, 2vw, 7rem);
   font-weight: 300;
   letter-spacing: 8px;
   margin: 0;
@@ -213,5 +215,31 @@ ul {
 
 .hero-see_more {
   display: none;
+}
+
+@media (max-width: 876px) {
+  .hero-title {
+    padding: 100px 20px;
+  }
+  .hero-title h1 {
+    color: white;
+    -webkit-text-stroke: 0px;
+    letter-spacing: 1px;
+  }
+  .hero-destinations {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 10px;
+    padding-top: 70px;
+  }
+  .hero-destinations .destination {
+    text-align: left;
+    width: 220px;
+  }
 }
 /*# sourceMappingURL=style.css.map */

@@ -9,7 +9,6 @@
 
 body {
   height: 100vh;
-  overflow: hidden;
   font-family: "Albert Sans", sans-serif;
   font-size: clamp(0.8rem, 1.17vw, 0.9rem);
 }
@@ -45,14 +44,14 @@ ul {
 
   h1 {
     text-align: center;
-    font-size: clamp(5rem, 12vw, 18rem);
+    font-size: clamp(3rem, 12vw, 18rem);
     font-weight: 700;
     color: transparent;
     -webkit-text-stroke: 4px white;
   }
   .small-title {
     text-align: center;
-    font-size: 30px;
+    font-size: clamp(1rem, 2vw, 7rem);
     font-weight: 300;
     letter-spacing: 8px;
     margin: 0;
@@ -88,4 +87,28 @@ ul {
 
 .hero-see_more {
   display: none;
+}
+
+@media (max-width: 876px) {
+  .hero-title {
+    padding: 100px 20px;
+
+    h1 {
+      color: white;
+      -webkit-text-stroke: 0px;
+      letter-spacing: 1px;
+    }
+  }
+
+  .hero-destinations {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-top: 70px;
+
+    .destination {
+      text-align: left;
+      width: 220px;
+    }
+  }
 }
