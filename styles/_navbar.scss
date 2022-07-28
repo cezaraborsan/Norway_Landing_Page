@@ -7,14 +7,11 @@
 
 .menu-list {
   display: flex;
-
   .menu-item {
     margin: 0 18px;
-
     a {
       text-decoration: none;
       color: white;
-
       &:hover {
         border-bottom: 2px solid white;
       }
@@ -25,6 +22,8 @@
     }
   }
 }
+
+// Logo
 
 .logo {
   display: flex;
@@ -39,7 +38,7 @@
   }
 }
 
-// hamburger menu
+// Hamburger menu
 .bar {
   display: block;
   width: 25px;
@@ -53,6 +52,8 @@
   display: none;
 }
 
+// Close button inside hamburger menu
+
 .close-btn {
   width: 20px;
   position: absolute;
@@ -61,9 +62,13 @@
   display: none;
 }
 
+// Overlay
+
 .overlay {
   display: none;
 }
+
+//For screens with max width 1000px
 
 @media (max-width: 1000px) {
   .hamburger-menu {
@@ -99,6 +104,8 @@
       }
     }
   }
+
+  // Add overlay when hamburger menu is open
   .overlay {
     position: fixed;
     display: none;

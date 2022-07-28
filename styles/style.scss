@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Albert+Sans:wght@400;500;600;700&display=swap");
 @import "./navbar";
+@import "./slider";
 
 * {
   box-sizing: border-box;
@@ -10,12 +11,17 @@
 body {
   font-family: "Albert Sans", sans-serif;
   font-size: clamp(0.8rem, 1.17vw, 0.9rem);
+  height: 100vh;
 }
 
 .container {
   width: clamp(16rem, 100vw, 137rem);
   padding: 40px 30px;
 }
+
+// Hero Section
+
+//Add background video
 
 .hero-video video {
   position: absolute;
@@ -84,7 +90,9 @@ ul {
   }
 }
 
-@media (max-width: 876px) {
+//For screens with max width 1000px
+
+@media (max-width: 1000px) {
   .hero-title {
     h1 {
       color: white;
