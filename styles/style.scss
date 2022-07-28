@@ -8,13 +8,12 @@
 }
 
 body {
-  height: 100vh;
   font-family: "Albert Sans", sans-serif;
   font-size: clamp(0.8rem, 1.17vw, 0.9rem);
 }
 
 .container {
-  width: 100%;
+  width: clamp(16rem, 100vw, 137rem);
   padding: 40px 30px;
 }
 
@@ -40,7 +39,7 @@ ul {
 
 .hero-title {
   text-align: center;
-  padding: 100px;
+  padding: clamp(2rem, 10vh, 5rem);
 
   h1 {
     text-align: center;
@@ -65,7 +64,7 @@ ul {
   justify-content: center;
   align-items: center;
   gap: 60px;
-  padding-top: 60px;
+  padding-top: 5vh;
 
   .destination {
     display: flex;
@@ -85,14 +84,8 @@ ul {
   }
 }
 
-.hero-see_more {
-  display: none;
-}
-
 @media (max-width: 876px) {
   .hero-title {
-    padding: 100px 20px;
-
     h1 {
       color: white;
       -webkit-text-stroke: 0px;
