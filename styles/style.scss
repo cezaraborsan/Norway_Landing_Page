@@ -50,6 +50,13 @@ ul {
     font-weight: 700;
     color: transparent;
     -webkit-text-stroke: 4px white;
+    transition: ease-in-out 0.5s;
+
+    &:hover {
+      color: white;
+      -webkit-text-stroke: 0px;
+      transition: all 0.5s;
+    }
   }
   .small-title {
     text-align: center;
@@ -68,18 +75,29 @@ ul {
   align-items: center;
   gap: 60px;
   padding-top: 5vh;
+  cursor: pointer;
 
   .destination {
-    display: flex;
-    gap: 10px;
-    background-color: rgba(255, 255, 255, 0.1);
-    padding: 10px 100px 10px 20px;
-    border-radius: 5px;
-    backdrop-filter: blur(1px);
-    line-height: 1rem;
+    a {
+      text-decoration: none;
+      color: white;
+      display: block;
+      background-color: rgba(255, 255, 255, 0.1);
+      padding: 10px 100px 10px 20px;
+      border-radius: 5px;
+      backdrop-filter: blur(1px);
+      line-height: 1rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
 
     small {
       opacity: 0.5;
+    }
+
+    span {
+      padding-left: 10px;
     }
   }
   .destination-city {

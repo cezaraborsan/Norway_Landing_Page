@@ -1,19 +1,6 @@
-.slide-picture {
-  max-width: 350px;
-  height: 500px;
-  border-radius: 5px;
-  position: relative;
-  filter: grayscale(1);
-}
-
 .swiper-section {
   text-align: center;
   padding: 5rem 0;
-}
-
-.swiper-button-prev,
-.swiper-button-next {
-  color: black !important;
 }
 
 .swiper-title {
@@ -67,8 +54,23 @@
   }
 }
 
+.slide-picture {
+  max-width: 350px;
+  height: 500px;
+  border-radius: 5px;
+  position: relative;
+  filter: grayscale(1);
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  color: black !important;
+}
+
 @media (max-width: 1000px) {
   .slide-picture {
+    max-width: 200px;
+    height: 300px;
     filter: grayscale(0);
   }
 
