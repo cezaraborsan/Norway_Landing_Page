@@ -14,27 +14,24 @@ body {
   height: 100vh;
 }
 
+// Hide the scrollbars
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
 .container {
   width: clamp(16rem, 100vw, 137rem);
-  padding: 40px 30px;
 }
 
 // Hero Section
 
-//Add background video
-
-.hero-video video {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: -2;
-}
-
 .hero {
   color: white;
+  background-image: url("/images/dan-otis-OYFHT4X5isg-unsplash.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 3rem 3rem 14rem 3rem;
 }
 
 ul {
