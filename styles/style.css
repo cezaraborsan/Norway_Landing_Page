@@ -175,8 +175,8 @@
   position: absolute;
   bottom: 1rem;
   left: 0;
-  -webkit-transform: translateX(4rem);
-          transform: translateX(4rem);
+  -webkit-transform: translateX(5rem);
+          transform: translateX(5rem);
   line-height: 1rem;
 }
 
@@ -323,26 +323,9 @@ h3 {
   }
 }
 
-.booking-img {
-  max-width: clamp(200px, 30vw, 400px);
-  border-radius: 5px;
-}
-
 .booking-section {
-  margin: 0 8rem;
-}
-
-.booking-form {
-  margin: 4rem 8rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  max-width: 80%;
+  margin: auto;
 }
 
 .booking-cities {
@@ -354,8 +337,13 @@ h3 {
           justify-content: space-between;
 }
 
+.booking-img {
+  max-width: clamp(150px, 22vw, 350px);
+  border-radius: 5px;
+}
+
 h4 {
-  font-size: clamp(1rem, 2vw, 1.5rem);
+  font-size: clamp(0.8rem, 1.8vw, 1.5rem);
   color: #3d3d3d;
   padding-bottom: 10px;
 }
@@ -369,6 +357,32 @@ h4 span {
   color: orange;
 }
 
+form {
+  max-width: 80%;
+  margin: 4rem auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-bottom: 8rem;
+}
+
+form .input-filed input,
+form .input-filed select {
+  display: inline-block;
+  background: none;
+  border: 1px solid rgba(54, 54, 54, 0.2);
+  font-size: 1rem;
+  padding: 20px;
+  border-radius: 10px;
+  width: 15vw;
+}
+
 label {
   display: block;
   font-size: 1rem;
@@ -377,22 +391,8 @@ label {
   padding-bottom: 0.8rem;
 }
 
-.input {
-  display: inline-block;
-  position: relative;
-}
-
-.input input,
-.input select {
-  background: none;
-  border: 1px solid rgba(54, 54, 54, 0.2);
-  width: 15vw;
-  font-size: 1rem;
-  padding: 20px 10px;
-  border-radius: 10px;
-}
-
 .booking-search-btn {
+  display: block;
   background-color: #3d3d3d;
   border: none;
   color: white;
@@ -402,8 +402,56 @@ label {
   border-radius: 10px;
 }
 
+.booking-search-btn:hover {
+  background-color: #202020;
+}
+
+.booking-search-btn:active {
+  background-color: #141414;
+}
+
 .hide {
   opacity: 0;
+}
+
+@media (max-width: 1000px) {
+  form {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  form .input-filed input,
+  form .input-filed select {
+    display: block;
+    width: 70vw;
+  }
+  form .booking-search-btn {
+    display: block;
+    width: 70vw;
+  }
+}
+
+@media (max-width: 600px) {
+  .booking-cities {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .booking-img {
+    max-width: clamp(250px, 22vw, 350px);
+    border-radius: 5px;
+  }
 }
 
 * {
@@ -432,7 +480,7 @@ body::-webkit-scrollbar {
   background-image: url("/images/dan-otis-OYFHT4X5isg-unsplash.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 3rem 3rem 14rem 3rem;
+  padding: 3rem 3rem 15rem 3rem;
 }
 
 ul {
