@@ -9,7 +9,10 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.css"
     />
-
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <title>Travel Landing Page</title>
   </head>
   <body>
@@ -30,7 +33,7 @@
               <li class="menu-item"><a href="#">Activities</a></li>
               <li class="menu-item"><a href="#">About Us</a></li>
               <li class="menu-item"><a href="#">Contact</a></li>
-              <svg
+              <!-- <svg
                 class="close-btn"
                 enable-background="new 0 0 27.334 27.333"
                 id="Capa_1"
@@ -43,7 +46,7 @@
                 <path
                   d="M20.872,13.666l5.152-5.152c1.744-1.744,1.744-4.583,0.002-6.329l-0.879-0.877C24.308,0.465,23.183,0,21.983,0  c-1.197,0-2.321,0.464-3.164,1.309l-5.152,5.152L8.514,1.308C7.672,0.465,6.548,0,5.351,0C4.152,0,3.027,0.465,2.184,1.31  L1.31,2.183c-1.744,1.748-1.744,4.587-0.002,6.33l5.153,5.153l-5.152,5.153c-1.744,1.745-1.744,4.584-0.001,6.328l0.877,0.877  c0.844,0.844,1.968,1.309,3.165,1.309c1.198,0,2.322-0.465,3.165-1.31l5.152-5.151l5.152,5.152c0.843,0.844,1.967,1.309,3.164,1.309  s2.322-0.465,3.166-1.309l0.875-0.876c1.744-1.745,1.744-4.584,0.002-6.328L20.872,13.666z M24.61,23.734l-0.875,0.876  c-0.481,0.48-1.116,0.723-1.752,0.723c-0.635,0-1.269-0.24-1.75-0.723l-6.566-6.566L7.1,24.61c-0.481,0.48-1.115,0.723-1.75,0.723  c-0.635,0-1.27-0.24-1.751-0.723l-0.876-0.876c-0.962-0.963-0.962-2.538,0-3.501l6.566-6.567L2.723,7.1  c-0.962-0.963-0.962-2.538,0-3.502l0.876-0.875C4.08,2.24,4.715,2,5.35,2C5.985,2,6.62,2.24,7.1,2.722l6.567,6.567l6.566-6.567  C20.715,2.24,21.351,2,21.983,2c0.636,0,1.271,0.24,1.752,0.723l0.875,0.875c0.963,0.964,0.963,2.539,0,3.502l-6.566,6.566  l6.566,6.567C25.573,21.196,25.573,22.771,24.61,23.734z"
                 />
-              </svg>
+              </svg> -->
             </ul>
           </div>
           <div class="hamburger-menu">
@@ -206,6 +209,97 @@
                 </p>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="booking-section">
+        <div class="section-title">
+          <p class="section-subtitle">Beauties</p>
+          <h2>Hotels and Apartaments</h2>
+        </div>
+        <div class="booking-cities">
+            <div class="city">
+              <img src="images\Oslo.jpg" alt="Reine city" class="booking-img" />
+              <div class="city-rating">
+                <h4>Oslo, Norway <br> <span>~$242/night</span></h4>
+                <div class="stars">
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                </div>
+              </div>
+            </div>
+
+            <div class="city">
+              <img src="images\Bergen.jpg" alt="Reine city" class="booking-img" />
+              <div class="city-rating">
+                <h4>Bergen, Norway <br> <span>~$148/night</span></h4>
+                <div class="stars">
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star"></span>
+                </div>
+              </div>
+            </div>
+
+            <div class="city">
+              <img
+                src="images\Kristiansand.jpg"
+                alt="Reine city"
+                class="booking-img"
+              />
+              <div class="city-rating">
+                <h4>Kristiansand, Norway <br><span>~$185/night</span></h4>
+                <div class="stars">
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star"></span>
+                </div>
+              </div>
+            </div>
+           </div>
+        </div>
+        <div class="booking-form">
+          <div class="date input">
+            <label for="date">Date</label>
+            <input type="date" name="date">
+          </div>
+          <div class="location input">
+            <label for="location">Location</label>
+            <select name="location" id="location">
+              <option value="oslo">Oslo</option>
+              <option value="bergen">Bergen</option>
+              <option value="trondheim">Trondheim</option>
+              <option value="molde">Molde</option>
+              <option value="kristiansand">Kristiansand</option>
+              <option value="lofoten">Lofoten</option>
+              <option value="geiranger">Geiranger</option>
+              <option value="alesund">Alesund</option>
+            </select>
+          </div>
+          <div class="explore input">
+            <label for="explore">Explore</label>
+            <select name="explore" id="explore">
+              <option value="hotels">Hotels</option>
+              <option value="vacantion rentals">Vacantion Rentals</option>
+              <option value="things to do">Things To Do</option>
+              <option value="restaurants">Restaurants</option>
+              <option value="flights">Flights</option>
+              <option value="cruises">Cruises</option>
+              <option value="rental cars">Rental Cars</option>
+              <option value="vacantion packages">Vacantion Packages</option>
+            </select>
+          </div>
+          <div>
+            <label for="" class="hide">Search</label>
+            <button type="submit" class="booking-search-btn">Search</button>
           </div>
         </div>
       </section>

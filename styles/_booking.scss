@@ -1,0 +1,72 @@
+.booking-img {
+  max-width: clamp(200px, 30vw, 400px);
+  border-radius: 5px;
+}
+
+.booking-section {
+  margin: 0 8rem;
+}
+
+.booking-form {
+  margin: 4rem 8rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.booking-cities {
+  display: flex;
+  justify-content: space-between;
+}
+
+h4 {
+  font-size: clamp(1rem, 2vw, 1.5rem);
+  color: #3d3d3d;
+  padding-bottom: 10px;
+
+  span {
+    font-size: clamp(0.7rem, 1.5vw, 1.1rem);
+    opacity: 0.8;
+  }
+}
+
+.checked {
+  color: orange;
+}
+
+label {
+  display: block;
+  font-size: 1rem;
+  font-weight: 700;
+  opacity: 0.7;
+  padding-bottom: 0.8rem;
+}
+
+.input {
+  display: inline-block;
+  position: relative;
+
+  input,
+  select {
+    background: none;
+    border: 1px solid rgba(54, 54, 54, 0.2);
+    width: 15vw;
+    font-size: 1rem;
+    padding: 20px 10px;
+    border-radius: 10px;
+  }
+}
+
+.booking-search-btn {
+  background-color: #3d3d3d;
+  border: none;
+  color: white;
+  padding: 20px 10px;
+  width: 10vw;
+  font-size: 1.1rem;
+  border-radius: 10px;
+}
+
+.hide {
+  opacity: 0;
+}

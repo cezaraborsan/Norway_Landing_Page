@@ -54,13 +54,13 @@
 
 // Close button inside hamburger menu
 
-.close-btn {
-  width: 20px;
-  position: absolute;
-  right: 25px;
-  top: 25px;
-  display: none;
-}
+// .close-btn {
+//   width: 20px;
+//   position: absolute;
+//   right: 25px;
+//   top: 25px;
+//   display: none;
+// }
 
 // Overlay
 
@@ -83,7 +83,7 @@
     width: 50vw;
     background-color: white;
     z-index: 200;
-    transform: translateX(100%);
+    transform: translateY(-100%);
     transition: ease-in-out 0.3s;
 
     .menu-list {
