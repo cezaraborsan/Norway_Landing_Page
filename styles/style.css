@@ -237,6 +237,9 @@
 .about-section {
   max-width: 80%;
   margin: auto;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  padding: 5rem 0;
 }
 
 .about-content {
@@ -324,8 +327,18 @@ h3 {
 }
 
 .booking-section {
+<<<<<<< Updated upstream
   max-width: 80%;
   margin: auto;
+=======
+<<<<<<< Updated upstream
+  margin: 0 8rem;
+=======
+  max-width: 80%;
+  margin: auto;
+  padding: 5rem 0;
+>>>>>>> Stashed changes
+>>>>>>> Stashed changes
 }
 
 .booking-cities {
@@ -414,6 +427,11 @@ label {
   opacity: 0;
 }
 
+<<<<<<< Updated upstream
+=======
+<<<<<<< Updated upstream
+=======
+>>>>>>> Stashed changes
 @media (max-width: 1000px) {
   form {
     -webkit-box-orient: vertical;
@@ -449,11 +467,19 @@ label {
             align-items: center;
   }
   .booking-img {
+<<<<<<< Updated upstream
     max-width: clamp(250px, 22vw, 350px);
+=======
+    max-width: clamp(220px, 22vw, 350px);
+>>>>>>> Stashed changes
     border-radius: 5px;
   }
 }
 
+<<<<<<< Updated upstream
+=======
+>>>>>>> Stashed changes
+>>>>>>> Stashed changes
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -477,7 +503,7 @@ body::-webkit-scrollbar {
 
 .hero {
   color: white;
-  background-image: url("/images/dan-otis-OYFHT4X5isg-unsplash.jpg");
+  background-image: url("/images/dan-otis-OYFHT4X5isg-unsplash.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
   padding: 3rem 3rem 15rem 3rem;
@@ -563,6 +589,13 @@ ul {
 
 .hero-destinations .destination-city {
   margin: 0;
+}
+
+.visible {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  -webkit-transition: all 0.8s;
+  transition: all 0.8s;
 }
 
 @media (max-width: 1000px) {
