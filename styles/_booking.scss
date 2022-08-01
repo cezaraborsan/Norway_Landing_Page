@@ -1,16 +1,6 @@
 .booking-section {
-<<<<<<< Updated upstream
   max-width: 80%;
-  margin: auto;
-=======
-<<<<<<< Updated upstream
-  margin: 0 8rem;
-=======
-  max-width: 80%;
-  margin: auto;
-  padding: 5rem 0;
->>>>>>> Stashed changes
->>>>>>> Stashed changes
+  margin: 0 auto;
 }
 
 .booking-cities {
@@ -39,12 +29,9 @@ h4 {
 }
 
 form {
-  max-width: 80%;
-  margin: 4rem auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-bottom: 8rem;
 
   .input-filed {
     input,
@@ -90,11 +77,6 @@ label {
 .hide {
   opacity: 0;
 }
-<<<<<<< Updated upstream
-=======
-<<<<<<< Updated upstream
-=======
->>>>>>> Stashed changes
 
 @media (max-width: 1000px) {
   form {
@@ -124,15 +106,7 @@ label {
   }
 
   .booking-img {
-<<<<<<< Updated upstream
     max-width: clamp(250px, 22vw, 350px);
     border-radius: 5px;
   }
 }
-=======
-    max-width: clamp(220px, 22vw, 350px);
-    border-radius: 5px;
-  }
-}
->>>>>>> Stashed changes
->>>>>>> Stashed changes

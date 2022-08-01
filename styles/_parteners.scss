@@ -1,0 +1,77 @@
+.parteners-logos {
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+  align-items: center;
+  padding-top: 3rem;
+}
+
+.partener-logo {
+  opacity: 0.8;
+  width: clamp(8rem, 10vw, 13rem);
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.booking-logo {
+  transform: translateY(2px);
+  width: clamp(9rem, 11vw, 14rem);
+}
+
+@media (max-width: 800px) {
+  .parteners-logos {
+    flex-direction: column;
+    gap: 3rem;
+    padding-top: 4rem;
+  }
+}
+
+// Testimonials section
+
+.testimonials-section {
+  background-image: url("/images/testimonials-bg (1).jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+  max-width: 80%;
+  margin: 0 auto;
+  border-radius: 5px;
+}
+
+.user-pic {
+  max-width: 80px;
+  border-radius: 100%;
+}
+
+.testimonial {
+  padding: 6rem 0;
+  margin: 0 2rem;
+}
+
+.testimonial-text {
+  background-color: white;
+  border-radius: 1rem;
+  padding: 2.2rem;
+  margin: 1.5rem 0;
+}
+
+.user-info {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  gap: 1rem;
+  color: white;
+  font-size: 1rem;
+  font-weight: 700;
+
+  span {
+    font-size: 0.8rem;
+    opacity: 0.8;
+    font-weight: 700;
+  }
+}
