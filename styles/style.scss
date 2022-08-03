@@ -1,10 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Albert+Sans:wght@400;500;600;700&display=swap");
 @import "./navbar";
-@import "./slider";
-@import "./aboutus";
-@import "./booking";
-@import "./parteners";
-@import "./footer";
 
 * {
   box-sizing: border-box;
@@ -16,12 +11,11 @@ body {
   font-family: "Albert Sans", sans-serif;
   font-size: clamp(0.8rem, 1.17vw, 0.9rem);
   height: 100vh;
+}
 
-  // Hide the scrollbars
-
-  body::-webkit-scrollbar {
-    display: none;
-  }
+// Hide the scrollbars
+body::-webkit-scrollbar {
+  display: none;
 }
 
 .container {
@@ -55,19 +49,22 @@ section {
   padding: 5rem 0;
 }
 
-.aboutus-section,
-.booking-section,
-.parteners-section {
-  max-width: 80%;
-  margin: 0 auto;
-}
-
 footer {
   padding-bottom: 5rem;
 }
 
+.aboutus-section,
+.booking-section,
+.parteners-section,
+.newsletter-section {
+  max-width: 80%;
+  margin: 0 auto;
+}
+
 button {
   cursor: pointer;
+
+  letter-spacing: 2px;
 }
 
 h1 {
@@ -89,18 +86,18 @@ h1 {
   text-align: center;
   padding-bottom: 4rem;
 
-  h2 {
-    font-size: clamp(1.4rem, 3vw, 2rem);
-    font-weight: 600;
-    padding-top: 0.5rem;
-    letter-spacing: 1px;
-  }
-
   p {
     text-transform: uppercase;
     letter-spacing: 3px;
     font-size: clamp(0.7rem, 2vw, 1.1rem);
   }
+}
+
+h2 {
+  font-size: clamp(1.8rem, 3vw, 2rem);
+  font-weight: 600;
+  padding-top: 0.5rem;
+  letter-spacing: 1px;
 }
 
 h3 {
@@ -117,8 +114,24 @@ h4 {
   font-weight: 500;
 }
 
-// Hero Section
+h5 {
+  font-size: 1rem;
+  font-weight: 600;
+  padding-bottom: 8px;
+}
 
+// Label used in booking form in the booking section
+
+label {
+  display: block;
+  font-size: 1rem;
+  font-weight: 700;
+  opacity: 0.7;
+  padding: 0.3rem 0;
+}
+
+// Hero Section
+// Hero Content Wrapper
 .hero {
   color: white;
   background-image: url("/images/dan-otis-OYFHT4X5isg-unsplash.jpeg");
@@ -129,7 +142,50 @@ h4 {
   margin-bottom: 2rem;
 }
 
-// Title
+//Navbar
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+//Navbar logo - display the logo flex to have the image and text in row centred
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+
+  .logo-text {
+    font-weight: 500;
+    letter-spacing: 3px;
+    margin: 0;
+  }
+}
+
+// Navbar links - diplay them in row and add hover state
+
+.menu-list {
+  display: flex;
+  .menu-item {
+    margin: 0 18px;
+    a {
+      color: white;
+      &:hover {
+        border-bottom: 2px solid white;
+      }
+      &:active {
+        color: wheat;
+        border-bottom: 2px solid wheat;
+      }
+    }
+  }
+}
+
+// Hero Section Title
 
 .hero-title {
   text-align: center;
@@ -144,7 +200,8 @@ h4 {
   }
 }
 
-//Destinations
+//Hero Destinations - display them flex to have all 3 destinations in row,
+//centred with a gap of 60px between them and when click open a tripadvisor page for each city
 
 .hero-destinations {
   display: flex;
@@ -181,9 +238,395 @@ h4 {
   }
 }
 
+//Swiper section - for the slider/swiper use the Swiper Framework
+
+.swiper-section {
+  text-align: center;
+}
+
+// Swiper slide - for each slide add grayscale and a text on picture with position absolute.
+// When hover make the text bigger and grayscale to 0
+
+.swiper-slide {
+  position: relative;
+
+  .slide-picture {
+    max-width: 350px;
+    height: 500px;
+    border-radius: 5px;
+    position: relative;
+    filter: grayscale(1);
+  }
+
+  p {
+    text-align: left;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: white;
+    position: absolute;
+    bottom: 1rem;
+    left: 0;
+    transform: translateX(5rem);
+    line-height: 1rem;
+
+    small {
+      font-size: 0.8rem;
+      font-weight: 400;
+    }
+  }
+
+  .slide-picture,
+  p,
+  small {
+    transition: all 0.3s;
+  }
+
+  &:hover p {
+    font-size: 1.8rem;
+
+    small {
+      font-size: 1rem;
+    }
+  }
+
+  &:hover img {
+    filter: grayscale(0);
+  }
+}
+
+//Swiper previous and next buttons - overwrite the initial color with black
+
+.swiper-button-prev,
+.swiper-button-next {
+  color: black !important;
+}
+
+//About Us Section
+
+.about-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.about-img {
+  max-width: clamp(32rem, 52%, 40rem);
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.about-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  // Display flex to put the number in row with the text (01 with Sustainable paragraph)
+
+  .about-info {
+    max-width: clamp(400px, 80%, 700px);
+    display: flex;
+    gap: 2rem;
+    padding-bottom: 20px;
+    margin: auto;
+
+    .paragraph-number {
+      font-size: clamp(1rem, 2.5vw, 1.8rem);
+      font-weight: 700;
+      color: #9b9b9b;
+      max-width: 20px;
+    }
+
+    .about-paragraph {
+      p {
+        max-width: clamp(15rem, 40vw, 38rem);
+      }
+    }
+  }
+}
+
+// Booking Section
+
+// Booking cities is a wrapper for each city (img, title, subtitle, rating stars)
+
+.booking-cities {
+  display: flex;
+  justify-content: space-between;
+}
+
+.booking-img {
+  max-width: clamp(150px, 22vw, 350px);
+  border-radius: 5px;
+}
+
+// Rating stars
+
+.city-rating {
+  span {
+    font-size: clamp(0.7rem, 1.5vw, 1.1rem);
+    opacity: 0.8;
+  }
+}
+
+// for checked stars
+
+.checked {
+  color: orange;
+}
+
+// Booking form, display flex to have them in row
+
+.booking-form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1rem;
+
+  .input-filed {
+    input,
+    select {
+      display: inline-block;
+      background: none;
+      border: 1px solid rgba(54, 54, 54, 0.2);
+      font-size: 1rem;
+      padding: 20px;
+      border-radius: 10px;
+      min-width: 15vw;
+    }
+  }
+}
+
+.booking-search-btn {
+  display: block;
+  background-color: #3d3d3d;
+  border: none;
+  color: white;
+  padding: 20px 10px;
+  width: 10vw;
+  font-size: 1.1rem;
+  border-radius: 10px;
+}
+
+.hide {
+  opacity: 0;
+}
+
+//Partners Section witch contains for logo from brands displayed in row.
+// the logos have an opacity that goes away when hover
+
+// Logos wrapper
+.partners-logos {
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+  align-items: center;
+  padding-top: 3rem;
+}
+
+.partner-logo {
+  opacity: 0.7;
+  width: clamp(6rem, 10vw, 13rem);
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.booking-logo {
+  transform: translateY(2px);
+  width: clamp(7rem, 11vw, 14rem);
+}
+
+// Testimonials section
+
+// Added on the entire section a bg-image and an overlay to make the image darker
+.testimonials-section {
+  background-image: url("/images/testimonials_bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 5px;
+  position: relative;
+  z-index: 2;
+
+  .bg-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    height: 100%;
+    width: 100%;
+    z-index: -2;
+  }
+}
+
+// Displayed the testimonials wrapper flex to have all the testimonials in row
+// next step: add a swiper/slider with more testimonials
+
+.testimonials-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  padding: 0 6rem;
+}
+
+.user-pic {
+  max-width: clamp(3.5rem, 4vw, 5.7rem);
+  border-radius: 100%;
+}
+
+.testimonial {
+  padding: 6rem 0;
+  margin: 0 2rem;
+}
+
+.testimonial-text {
+  background-color: white;
+  border-radius: 1rem;
+  padding: 2.2rem;
+  margin: 1.5rem 0;
+  min-width: 200px;
+}
+
+.user-info {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  gap: 1rem;
+  color: white;
+  font-size: clamp(0.7rem, 3vw, 1.1rem);
+  font-weight: 700;
+
+  span {
+    font-size: clamp(0.5rem, 1.4vw, 0.8rem);
+    opacity: 0.8;
+    font-weight: 700;
+  }
+}
+
+//Newsletter section
+
+.newsletter-section {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.6rem;
+}
+
+.newsletter-text {
+  max-width: clamp(16rem, 30vw, 26rem);
+}
+
+.newsletter-input,
+.newsletter-button {
+  background-color: transparent;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  padding: 1rem;
+  border-radius: 5px;
+}
+
+.newsletter-button {
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.newsletter-input {
+  width: clamp(10rem, 10vw, 16rem);
+}
+
+// Footer
+
+// footer wrapper
+
+.footer-content {
+  display: flex;
+  justify-content: space-evenly;
+  color: black;
+}
+
+// footer logo, used the same logo from navbar,
+//added background color, padding to make it even and border radius to make it a circle
+
+.footer-logo {
+  font-size: 1.3rem;
+  font-weight: 600;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+  padding-bottom: 1rem;
+  margin-bottom: 2rem;
+
+  img {
+    background-color: black;
+    padding: 7px 0px 7px 7px;
+    border-radius: 50px;
+  }
+}
+
+// email icon
+.email {
+  width: 16px;
+}
+
+// social media icons
+.social-links {
+  display: flex;
+  gap: 1rem;
+  img {
+    width: 20px;
+  }
+}
+
+//Contact info (address, email, phone)
+.contact-item {
+  display: flex;
+  gap: 0.8rem;
+}
+
+footer li {
+  padding: 8px 0;
+}
+
+footer a {
+  color: black;
+}
+
+//For screens with max width 1200px
+
+@media (max-width: 1200px) {
+  //About us section
+  .about-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .about-img {
+    max-width: 700px;
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin: auto;
+  }
+
+  .about-info {
+    gap: 1.5rem;
+  }
+}
+
 //For screens with max width 1000px
 
 @media (max-width: 1000px) {
+  // Hero section
   .hero-title {
     padding: 5rem 1rem;
     h1 {
@@ -204,9 +647,179 @@ h4 {
       width: 220px;
     }
   }
+
+  .testimonial {
+    padding: 0;
+    margin: 0 2rem;
+  }
+
+  // Navbar
+  .hamburger-menu {
+    display: block;
+  }
+
+  .links {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 50vw;
+    background-color: white;
+    z-index: 200;
+    transform: translateY(-100%);
+    transition: ease-in-out 0.3s;
+
+    .menu-list {
+      flex-direction: column;
+      margin-top: 50px;
+    }
+
+    .menu-item {
+      padding: 30px 20px 10px;
+      text-transform: uppercase;
+
+      a {
+        color: black;
+        font-size: 18px;
+        &:hover {
+          border-bottom: black;
+        }
+      }
+    }
+
+    // Slider/swiper section
+
+    .slide-picture {
+      max-width: 200px;
+      height: 300px;
+      filter: grayscale(0);
+    }
+
+    .swiper-slide {
+      p {
+        font-size: 1.2rem;
+        transform: translateX(2rem);
+      }
+
+      &:hover p {
+        font-size: 1.2rem;
+
+        small {
+          font-size: 0.6rem;
+        }
+      }
+    }
+  }
+
+  // Booking section
+
+  .booking-form {
+    flex-direction: column;
+
+    .input-filed {
+      input,
+      select {
+        display: block;
+        width: 70vw;
+      }
+    }
+
+    .booking-search-btn {
+      display: block;
+      width: 70vw;
+    }
+  }
+
+  // Partners section
+  .testimonials-wrapper {
+    flex-direction: column;
+    gap: 0;
+    padding: 0;
+  }
+
+  .testimonial {
+    padding: 0;
+    margin: 0 2rem;
+  }
+
+  .testimonial-text {
+    max-width: 400px;
+  }
+
+  //Newsletter section
+  .newsletter {
+    max-width: 80%;
+    .subscribe {
+      padding: 0.5rem 2rem;
+    }
+
+    .subscribe {
+      * {
+        margin: 0.1 0;
+      }
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  //Slider/swiper section
+  .swiper-slide {
+    p {
+      font-size: 1rem;
+      transform: translateX(0.5rem);
+    }
+
+    &:hover p {
+      font-size: 1rem;
+    }
+  }
+  .footer-content {
+    flex-direction: column;
+    padding: 0 1rem;
+  }
+
+  .footer-subtitle {
+    padding-top: 1.5rem;
+  }
+}
+
+@media (max-width: 650px) {
+  // Booking section
+  .booking-cities {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .booking-img {
+    max-width: clamp(250px, 22vw, 350px);
+    border-radius: 5px;
+  }
+
+  // Partners section
+
+  .partners-logos {
+    flex-direction: column;
+    gap: 3rem;
+    padding-top: 4rem;
+  }
+}
+
+@media (max-width: 500px) {
+  // Newsletter section
+  .newsletter-input {
+    min-width: 55vw;
+  }
+  .newsletter-button {
+    display: block;
+    width: 100%;
+    margin-top: 0.5rem;
+  }
 }
 
 @media (max-height: 650px) {
+  //Hero section
   .hero {
     height: auto;
   }
