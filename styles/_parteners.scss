@@ -35,12 +35,6 @@
   background-size: cover;
   background-repeat: no-repeat;
   border-radius: 5px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 5rem;
-  max-width: 80%;
-  margin: 0 auto;
   position: relative;
   z-index: 2;
 
@@ -57,6 +51,13 @@
   }
 }
 
+.testimonials-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+  padding: 0 6rem;
+}
 .user-pic {
   max-width: clamp(3.5rem, 4vw, 5.7rem);
   border-radius: 100%;
@@ -72,6 +73,7 @@
   border-radius: 1rem;
   padding: 2.2rem;
   margin: 1.5rem 0;
+  min-width: 200px;
 }
 
 .user-info {
@@ -91,13 +93,18 @@
 }
 
 @media (max-width: 1000px) {
-  .testimonials-section {
+  .testimonials-wrapper {
     flex-direction: column;
     gap: 1rem;
+    padding: 0;
   }
 
   .testimonial {
     padding: 1rem 2rem;
     margin: 0 2rem;
+  }
+
+  .testimonial-text {
+    max-width: 400px;
   }
 }

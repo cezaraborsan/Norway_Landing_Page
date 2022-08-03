@@ -1,22 +1,5 @@
 .swiper-section {
   text-align: center;
-  margin: auto;
-}
-
-.section-title {
-  padding: 20px 0 80px;
-
-  h2 {
-    font-size: clamp(1.4rem, 3vw, 2rem);
-    padding-top: 0.5rem;
-    letter-spacing: 1px;
-  }
-
-  p {
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    font-size: clamp(0.7rem, 2vw, 1.1rem);
-  }
 }
 
 .swiper-slide {
@@ -40,7 +23,7 @@
   p {
     text-align: left;
     font-size: 1.3rem;
-    font-weight: 700;
+    font-weight: 500;
     color: white;
     position: absolute;
     bottom: 1rem;
@@ -49,7 +32,8 @@
     line-height: 1rem;
 
     small {
-      font-size: 0.6rem;
+      font-size: 0.8rem;
+      font-weight: 400;
     }
   }
 }

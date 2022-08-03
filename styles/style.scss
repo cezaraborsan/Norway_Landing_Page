@@ -4,6 +4,8 @@
 @import "./aboutus";
 @import "./booking";
 @import "./parteners";
+@import "./footer";
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -14,16 +16,105 @@ body {
   font-family: "Albert Sans", sans-serif;
   font-size: clamp(0.8rem, 1.17vw, 0.9rem);
   height: 100vh;
-}
 
-// Hide the scrollbars
+  // Hide the scrollbars
 
-body::-webkit-scrollbar {
-  display: none;
+  body::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 .container {
   width: clamp(16rem, 100vw, 137rem);
+}
+
+//Components
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+button {
+  cursor: pointer;
+
+  &:hover {
+    background-color: #202020;
+  }
+
+  &:active {
+    background-color: #141414;
+  }
+}
+
+section {
+  padding: 5rem 0;
+}
+
+.aboutus-section,
+.booking-section,
+.parteners-section {
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+footer {
+  padding-bottom: 5rem;
+}
+
+button {
+  cursor: pointer;
+}
+
+h1 {
+  text-align: center;
+  font-size: clamp(3rem, 12vw, 18rem);
+  font-weight: 700;
+  color: transparent;
+  -webkit-text-stroke: 4px white;
+  transition: ease-in-out 0.5s;
+
+  &:hover {
+    color: white;
+    -webkit-text-stroke: 0px;
+    transition: all 0.5s;
+  }
+}
+
+.section-title {
+  text-align: center;
+  padding-bottom: 4rem;
+
+  h2 {
+    font-size: clamp(1.4rem, 3vw, 2rem);
+    font-weight: 600;
+    padding-top: 0.5rem;
+    letter-spacing: 1px;
+  }
+
+  p {
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: clamp(0.7rem, 2vw, 1.1rem);
+  }
+}
+
+h3 {
+  font-size: clamp(1rem, 2.5vw, 1.8rem);
+  color: #3d3d3d;
+  padding-bottom: 10px;
+  font-weight: 600;
+}
+
+h4 {
+  font-size: clamp(0.8rem, 1.8vw, 1.5rem);
+  color: #3d3d3d;
+  padding-bottom: 1rem;
+  font-weight: 500;
 }
 
 // Hero Section
@@ -33,11 +124,9 @@ body::-webkit-scrollbar {
   background-image: url("/images/dan-otis-OYFHT4X5isg-unsplash.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 3rem 3rem 15rem 3rem;
-}
-
-ul {
-  list-style: none;
+  padding: 3rem 3rem;
+  height: 100vh;
+  margin-bottom: 2rem;
 }
 
 // Title
@@ -46,20 +135,6 @@ ul {
   text-align: center;
   padding: clamp(2rem, 10vh, 5rem);
 
-  h1 {
-    text-align: center;
-    font-size: clamp(3rem, 12vw, 18rem);
-    font-weight: 700;
-    color: transparent;
-    -webkit-text-stroke: 4px white;
-    transition: ease-in-out 0.5s;
-
-    &:hover {
-      color: white;
-      -webkit-text-stroke: 0px;
-      transition: all 0.5s;
-    }
-  }
   .small-title {
     text-align: center;
     font-size: clamp(1rem, 2vw, 7rem);
@@ -76,12 +151,11 @@ ul {
   justify-content: center;
   align-items: center;
   gap: 60px;
-  padding-top: 5vh;
+  padding-top: 5rem;
   cursor: pointer;
 
   .destination {
     a {
-      text-decoration: none;
       color: white;
       display: block;
       background-color: rgba(255, 255, 255, 0.1);
@@ -107,16 +181,6 @@ ul {
   }
 }
 
-// section {
-//   // transform: translateY(100px);
-//   // transition: ease-in-out 0.3s;
-// }
-
-.visible {
-  transform: translateY(0);
-  transition: all 0.8s;
-}
-
 //For screens with max width 1000px
 
 @media (max-width: 1000px) {
@@ -133,11 +197,17 @@ ul {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    padding-top: 70px;
+    padding-top: 2rem;
 
     .destination {
       text-align: left;
       width: 220px;
     }
+  }
+}
+
+@media (max-height: 650px) {
+  .hero {
+    height: auto;
   }
 }
