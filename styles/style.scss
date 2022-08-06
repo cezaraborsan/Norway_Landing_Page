@@ -35,13 +35,16 @@ a {
 
 button {
   cursor: pointer;
+  letter-spacing: 2px;
 
   &:hover {
     background-color: #202020;
+    color: white;
   }
 
   &:active {
     background-color: #141414;
+    color: white;
   }
 }
 
@@ -63,7 +66,6 @@ footer {
 
 button {
   cursor: pointer;
-
   letter-spacing: 2px;
 }
 
@@ -168,23 +170,6 @@ label {
 
 // Navbar links - diplay them in row and add hover state
 
-.menu-list {
-  display: flex;
-  .menu-item {
-    margin: 0 18px;
-    a {
-      color: white;
-      &:hover {
-        border-bottom: 2px solid white;
-      }
-      &:active {
-        color: wheat;
-        border-bottom: 2px solid wheat;
-      }
-    }
-  }
-}
-
 // Hero Section Title
 
 .hero-title {
@@ -238,6 +223,8 @@ label {
   }
 }
 
+// Swiper
+
 //Swiper section - for the slider/swiper use the Swiper Framework
 
 .swiper-section {
@@ -245,52 +232,48 @@ label {
 }
 
 // Swiper slide - for each slide add grayscale and a text on picture with position absolute.
-// When hover make the text bigger and grayscale to 0
+// When hover make the text bigger and add blur on image
 
-.swiper-slide {
-  position: relative;
-
-  .slide-picture {
-    max-width: 350px;
-    height: 500px;
-    border-radius: 5px;
-    position: relative;
-    filter: grayscale(1);
-  }
-
-  p {
-    text-align: left;
-    font-size: 1.2rem;
-    font-weight: 500;
-    color: white;
-    position: absolute;
-    bottom: 1rem;
-    left: 0;
-    transform: translateX(5rem);
-    line-height: 1rem;
-
-    small {
-      font-size: 0.8rem;
-      font-weight: 400;
-    }
-  }
-
-  .slide-picture,
-  p,
+figcaption {
+  text-align: left;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: white;
+  position: absolute;
+  bottom: 1.5rem;
+  left: 20%;
+  line-height: 0.8;
+  opacity: 0;
   small {
-    transition: all 0.3s;
+    font-size: 0.8rem;
+    font-weight: 400;
   }
+}
 
-  &:hover p {
-    font-size: 1.8rem;
+.slide-img {
+  max-width: 250px;
+  height: 400px;
+  border-radius: 5px;
+  position: relative;
+  cursor: pointer;
+}
+
+.swiper-slide * {
+  transition: all 0.3s;
+}
+
+.swiper-slide:hover {
+  figcaption {
+    font-size: 1.5rem;
+    opacity: 1;
 
     small {
       font-size: 1rem;
     }
   }
 
-  &:hover img {
-    filter: grayscale(0);
+  img {
+    filter: blur(1.5px);
   }
 }
 
@@ -600,6 +583,33 @@ footer a {
   color: black;
 }
 
+// top up
+
+.up {
+  color: black;
+  padding: 1rem;
+  svg {
+    width: 3.5rem;
+    transform: rotate(180deg);
+
+    &:hover path {
+      transform: translateY(2px);
+      transition: ease-in-out 0.3s;
+    }
+  }
+}
+
+// Intersection observer
+
+section {
+  transform: translateY(100px);
+}
+
+.visible {
+  transform: translateY(0);
+  transition: all 0.5s;
+}
+
 //For screens with max width 1200px
 
 @media (max-width: 1200px) {
@@ -621,6 +631,8 @@ footer a {
   .about-info {
     gap: 1.5rem;
   }
+
+  //Swiper/Slider section
 }
 
 //For screens with max width 1000px
@@ -654,62 +666,6 @@ footer a {
   }
 
   // Navbar
-  .hamburger-menu {
-    display: block;
-  }
-
-  .links {
-    position: fixed;
-    top: 0;
-    right: 0;
-    height: 100vh;
-    width: 50vw;
-    background-color: white;
-    z-index: 200;
-    transform: translateY(-100%);
-    transition: ease-in-out 0.3s;
-
-    .menu-list {
-      flex-direction: column;
-      margin-top: 50px;
-    }
-
-    .menu-item {
-      padding: 30px 20px 10px;
-      text-transform: uppercase;
-
-      a {
-        color: black;
-        font-size: 18px;
-        &:hover {
-          border-bottom: black;
-        }
-      }
-    }
-
-    // Slider/swiper section
-
-    .slide-picture {
-      max-width: 200px;
-      height: 300px;
-      filter: grayscale(0);
-    }
-
-    .swiper-slide {
-      p {
-        font-size: 1.2rem;
-        transform: translateX(2rem);
-      }
-
-      &:hover p {
-        font-size: 1.2rem;
-
-        small {
-          font-size: 0.6rem;
-        }
-      }
-    }
-  }
 
   // Booking section
 
@@ -762,17 +718,6 @@ footer a {
 }
 
 @media (max-width: 800px) {
-  //Slider/swiper section
-  .swiper-slide {
-    p {
-      font-size: 1rem;
-      transform: translateX(0.5rem);
-    }
-
-    &:hover p {
-      font-size: 1rem;
-    }
-  }
   .footer-content {
     flex-direction: column;
     padding: 0 1rem;
@@ -816,7 +761,21 @@ footer a {
     width: 100%;
     margin-top: 0.5rem;
   }
+
+  // Section
+
+  section {
+    padding: 4rem 0;
+  }
+
+  .swiper-slide {
+    figcaption {
+      left: 30%;
+    }
+  }
 }
+
+// Swiper
 
 @media (max-height: 650px) {
   //Hero section

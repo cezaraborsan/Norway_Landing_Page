@@ -18,7 +18,7 @@
   <body>
     <div class="container">
       <div class="hero">
-        <nav class="navbar">
+        <header class="navbar">
           <div class="logo">
             <img
               src="footer-logo_white-xs 1.svg"
@@ -27,35 +27,50 @@
             />
             <p class="logo-text">TRAVELx</p>
           </div>
-          <menu class="links">
-            <ul class="menu-list">
-              <li class="menu-item"><a href="#">Destinations</a></li>
-              <li class="menu-item"><a href="#">Activities</a></li>
-              <li class="menu-item"><a href="#">About Us</a></li>
-              <li class="menu-item"><a href="#">Contact</a></li>
-              <!-- <svg
-                class="close-btn"
-                enable-background="new 0 0 27.334 27.333"
-                id="Capa_1"
-                version="1.1"
-                viewBox="0 0 27.334 27.333"
-                xml:space="preserve"
-                xmlns="http://www.w3.org/2000/svg"
-                xmlns:xlink="http://www.w3.org/1999/xlink"
-              >
-                <path
-                  d="M20.872,13.666l5.152-5.152c1.744-1.744,1.744-4.583,0.002-6.329l-0.879-0.877C24.308,0.465,23.183,0,21.983,0  c-1.197,0-2.321,0.464-3.164,1.309l-5.152,5.152L8.514,1.308C7.672,0.465,6.548,0,5.351,0C4.152,0,3.027,0.465,2.184,1.31  L1.31,2.183c-1.744,1.748-1.744,4.587-0.002,6.33l5.153,5.153l-5.152,5.153c-1.744,1.745-1.744,4.584-0.001,6.328l0.877,0.877  c0.844,0.844,1.968,1.309,3.165,1.309c1.198,0,2.322-0.465,3.165-1.31l5.152-5.151l5.152,5.152c0.843,0.844,1.967,1.309,3.164,1.309  s2.322-0.465,3.166-1.309l0.875-0.876c1.744-1.745,1.744-4.584,0.002-6.328L20.872,13.666z M24.61,23.734l-0.875,0.876  c-0.481,0.48-1.116,0.723-1.752,0.723c-0.635,0-1.269-0.24-1.75-0.723l-6.566-6.566L7.1,24.61c-0.481,0.48-1.115,0.723-1.75,0.723  c-0.635,0-1.27-0.24-1.751-0.723l-0.876-0.876c-0.962-0.963-0.962-2.538,0-3.501l6.566-6.567L2.723,7.1  c-0.962-0.963-0.962-2.538,0-3.502l0.876-0.875C4.08,2.24,4.715,2,5.35,2C5.985,2,6.62,2.24,7.1,2.722l6.567,6.567l6.566-6.567  C20.715,2.24,21.351,2,21.983,2c0.636,0,1.271,0.24,1.752,0.723l0.875,0.875c0.963,0.964,0.963,2.539,0,3.502l-6.566,6.566  l6.566,6.567C25.573,21.196,25.573,22.771,24.61,23.734z"
-                />
-              </svg> -->
+
+          <nav>
+            <div class="open-menu-links">
+              <img src="images\close.png" alt="x icon" class="close" />
+              <ul class="menu-list">
+                <li class="menu-item">
+                  <a class="menu-link" href="#">Destinations</a>
+                </li>
+                <li class="menu-item">
+                  <a class="menu-link" href="#">Activities</a>
+                </li>
+                <li class="menu-item">
+                  <a class="menu-link" href="#">About Us</a>
+                </li>
+                <li class="menu-item">
+                  <a class="menu-link" href="#">Contact</a>
+                </li>
+              </ul>
+            </div>
+
+            <ul class="contact-list-open-menu">
+              <li class="contact-item">
+                <img src="images\location.svg" alt="location" />
+                <address>Bjørnhullvegen 25,3917 Oslo,Norway</address>
+              </li>
+              <li class="contact-item">
+                <img src="images\email.svg" alt="email" class="email" />
+                <p>example@&#8203;travelx.com</p>
+              </li>
+              <li class="contact-item">
+                <img src="images\phone.svg" alt="phone" />
+                <p>+47-455-547-34</p>
+              </li>
             </ul>
-          </menu>
-          <div class="hamburger-menu">
+          </nav>
+
+          <div class="hamburger-menu-icon">
             <span class="bar bar--1"></span>
             <span class="bar bar--2"></span>
             <span class="bar bar--3"></span>
           </div>
-          <div class="overlay"></div>
-        </nav>
+          <div class="menu-open-overlay"></div>
+        </header>
+
         <div class="hero-title">
           <p class="small-title">EXPLORE</p>
           <h1>Norway</h1>
@@ -112,52 +127,55 @@
               <img
                 src="images\joel-jasmin-forestbird-znoL1m6MD_k-unsplash.jpeg"
                 alt="hiking"
-                class="slide-picture"
+                class="slide-img"
               />
-              <p>Hiking <br /><small>155 activites</small></p>
+              <figcaption>Hiking <br /><small>95 activites</small></figcaption>
             </div>
             <div class="swiper-slide">
               <img
                 src="images\christian-sogaard-g3VjvnSDUR0-unsplash.jpeg"
                 alt="explore, mushrooms"
-                class="slide-picture"
+                class="slide-img"
               />
-              <p>Exploring <br /><small>80 activites</small></p>
+              <div class="overlay-img"></div>
+              <figcaption>Explore <br /><small>90 activites</small></figcaption>
             </div>
             <div class="swiper-slide">
               <img
                 src="images\carina-tysvaer-wBdSkQag-cY-unsplash.jpeg"
                 alt="skiing"
-                class="slide-picture"
+                class="slide-img"
               />
-              <p>Skiing <br /><small>90 activites</small></p>
+              <figcaption>Skiing <br /><small>111 activites</small></figcaption>
             </div>
             <div class="swiper-slide">
               <img
                 src="images\clay-banks-Ppz6b-YUDHw-unsplash.jpeg"
                 alt="camping, tent"
-                class="slide-picture"
+                class="slide-img"
               />
-              <p>Camping <br /><small>200 activites</small></p>
+              <figcaption>Camping <br /><small>75 activites</small></figcaption>
             </div>
             <div class="swiper-slide">
               <img
                 src="images\eduardo-alvarado-jbJ6741nFtk-unsplash.jpeg"
                 alt=""
-                class="slide-picture"
+                class="slide-img"
               />
-              <p>Sailing <br /><small>120 activites</small></p>
+              <div class="overlay-img"></div>
+              <figcaption>Sailing <br /><small>87 activites</small></figcaption>
             </div>
             <div class="swiper-slide">
               <img
                 src="images\janko-ferlic-fBK3NKZvgjc-unsplash.jpeg"
                 alt="birdwatching"
-                class="slide-picture"
+                class="slide-img"
               />
-              <p>Birdwatching<br /><small>78 activites</small></p>
+              <figcaption>
+                Birdwatching <br /><small>60 activites</small>
+              </figcaption>
             </div>
           </div>
-
           <div class="swiper-button-prev"></div>
           <div class="swiper-button-next"></div>
         </div>
@@ -470,16 +488,41 @@
               </li>
               <li class="contact-item">
                 <img src="images\email.svg" alt="email" class="email" />
-                <p>+47-455-547-34</p>
+                <p>example@travelx.com</p>
               </li>
               <li class="contact-item">
                 <img src="images\phone.svg" alt="phone" />
-                <p>drgiggles@onlinecmail.com</p>
+                <p>+47-455-547-34</p>
               </li>
             </ul>
           </div>
         </div>
       </footer>
+      <div>
+        <a href="#" class="up">
+          <svg
+            width="35"
+            height="35"
+            viewBox="0 0 35 35"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              class="arrow"
+              d="M16.9697 23.0303C17.2626 23.3232 17.7374 23.3232 18.0303 23.0303L22.8033 18.2574C23.0962 17.9645 23.0962 17.4896 22.8033 17.1967C22.5104 16.9038 22.0355 16.9038 21.7426 17.1967L17.5 21.4393L13.2574 17.1967C12.9645 16.9038 12.4896 16.9038 12.1967 17.1967C11.9038 17.4896 11.9038 17.9645 12.1967 18.2574L16.9697 23.0303ZM16.75 3.27835e-08L16.75 22.5L18.25 22.5L18.25 -3.27835e-08L16.75 3.27835e-08Z"
+              fill="currentColor"
+            ></path>
+            <circle
+              class="circle"
+              cx="17.5"
+              cy="17.5"
+              r="16.75"
+              stroke="currentColor"
+              stroke-width="1.5"
+            ></circle>
+          </svg>
+        </a>
+      </div>
     </div>
   </body>
   <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>

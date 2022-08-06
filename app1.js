@@ -1,48 +1,63 @@
-const menu = document.querySelector(".links");
-const hamburgerMenu = document.querySelector(".hamburger-menu");
-const overlay = document.querySelector(".overlay");
-const closeBtn = document.querySelector(".close-btn");
+const menu = document.querySelector("nav");
+const hamburgerMenu = document.querySelector(".hamburger-menu-icon");
+const overlay = document.querySelector(".menu-open-overlay");
+const closeBtn = document.querySelector(".close");
 const screenWidth = screen.width;
 const slides = document.querySelectorAll(".slide");
 const slider = document.querySelector("slider");
 const prevButton = document.querySelector(".prev");
 const nextButton = document.querySelector(".next");
 
+window.onbeforeunload = function () {
+  window.scrollTo(0, 0);
+};
+
 //Hamburger menu functionalities
 
-// if (screenWidth < 1000) {
-//   hamburgerMenu.addEventListener("click", () => {
-//     menu.style.transform = "translateY(0)";
-//     overlay.style.display = "block";
-//     // closeBtn.style.display = "block";
-//   });
+hamburgerMenu.addEventListener("click", () => {
+  menu.classList.add("open-nav");
+  overlay.style.display = "block";
+});
 
-//   // closeBtn.addEventListener("click", () => {
-//   //   menu.style.transform = "translateY(-100%)";
-//   //   overlay.style.display = "none";
-//   //   closeBtn.style.display = "none";
-//   // });
+closeBtn.addEventListener("click", () => {
+  menu.classList.remove("open-nav");
+  overlay.style.display = "none";
+});
 
-//   // When click outside of menu to close
+// Close menu when click outside of it
 
-// //   window.addEventListener("mouseup", function (event) {
-// //     if (event.target != menu) {
-// //       menu.style.transform = "translateY(-100%)";
-// //       overlay.style.display = "none";
-// //       // closeBtn.style.display = "none";
-// //     }
-// //   });
-
-// //   console.log("here");
-// // }
+window.addEventListener("mouseup", (e) => {
+  if (e.target != menu) {
+    menu.classList.remove("open-nav");
+    overlay.style.display = "none";
+  }
+});
 
 // Slider functionalities
 
 const swiper = new Swiper(".swiper", {
-  slidesPerView: 4,
+  slidesPerView: 1,
   freemode: true,
   spaceBetween: 10,
   grabCursor: true,
+  breakpoints: {
+    480: {
+      slidesPerView: 1,
+      spaceBetween: 20,
+    },
+    576: {
+      slidesPerView: 2,
+      spaceBetween: 20,
+    },
+    768: {
+      slidesPerView: 3,
+      spaceBetween: 20,
+    },
+    1200: {
+      slidesPerView: 5,
+      spaceBetween: 20,
+    },
+  },
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
@@ -51,28 +66,27 @@ const swiper = new Swiper(".swiper", {
 
 // // Intersection Observer
 
-// const target = document.querySelector(".about-section");
-// const sections = document.querySelectorAll("section");
+const target = document.querySelector(".about-section");
+const sections = document.querySelectorAll("section");
 
-// const options = {
-//   rootMargin: "-150px 0px",
-// };
+const options = {
+  rootMargin: "-150px 0px",
+};
 
-// const translateOnScroll = new IntersectionObserver(function (
-//   entries,
-//   translateOnScroll
-// ) {
-//   entries.forEach((entry) => {
-//     if (!entry.isIntersecting) {
-//       return;
-//     } else {
-//       entry.target.classList.add("visible");
-//     }
-//   });
-// },
-// options);
+const translateOnScroll = new IntersectionObserver(function (
+  entries,
+  translateOnScroll
+) {
+  entries.forEach((entry) => {
+    if (!entry.isIntersecting) {
+      return;
+    } else {
+      entry.target.classList.add("visible");
+    }
+  });
+},
+options);
 
-// sections.forEach((section) => {
-//   translateOnScroll.observe(section);
-
-// });
+sections.forEach((section) => {
+  translateOnScroll.observe(section);
+});
