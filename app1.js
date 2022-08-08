@@ -7,17 +7,28 @@ const slides = document.querySelectorAll(".slide");
 const slider = document.querySelector("slider");
 const prevButton = document.querySelector(".prev");
 const nextButton = document.querySelector(".next");
+const sections = document.querySelectorAll("section");
 
-window.onbeforeunload = function () {
+// On load scroll on top
+
+window.addEventListener("load", (event) => {
+  scrollToTop();
+});
+
+function scrollToTop() {
   window.scrollTo(0, 0);
-};
+}
 
 //Hamburger menu functionalities
+
+//add class open-nav when click to open the hamburger menu and add the overlay
 
 hamburgerMenu.addEventListener("click", () => {
   menu.classList.add("open-nav");
   overlay.style.display = "block";
 });
+
+//remove class open-nav when click to close the hamburger menu and remove the overlay
 
 closeBtn.addEventListener("click", () => {
   menu.classList.remove("open-nav");
@@ -64,10 +75,7 @@ const swiper = new Swiper(".swiper", {
   },
 });
 
-// // Intersection Observer
-
-const target = document.querySelector(".about-section");
-const sections = document.querySelectorAll("section");
+// // Intersection Observer, section pop up when scoll into view
 
 const options = {
   rootMargin: "-150px 0px",
