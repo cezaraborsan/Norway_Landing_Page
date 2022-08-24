@@ -812,6 +812,10 @@ section {
 }
 
 @media (max-width: 756px) {
+  section {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
   .hamburger-menu-icon {
     display: block;
   }
@@ -937,6 +941,10 @@ section {
   }
   .swiper-slide figcaption {
     left: 30%;
+  }
+  .swiper-slide:hover img {
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
   }
 }
 

@@ -798,6 +798,9 @@ section {
 }
 
 @media (max-width: 756px) {
+  section {
+    transform: translateY(0px);
+  }
   // Hamburger menu
 
   .hamburger-menu-icon {
@@ -909,7 +912,7 @@ section {
     margin-top: 0.5rem;
   }
 
-  // Section
+  // Swiper
 
   section {
     padding: 4rem 0;
@@ -920,9 +923,13 @@ section {
       left: 30%;
     }
   }
-}
 
-// Swiper
+  .swiper-slide:hover {
+    img {
+      filter: blur(0px);
+    }
+  }
+}
 
 @media (max-height: 650px) {
   //Hero section
