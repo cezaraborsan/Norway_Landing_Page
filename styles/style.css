@@ -134,7 +134,7 @@ label {
 
 .hero {
   color: white;
-  background-image: url("/images/dan-otis-OYFHT4X5isg-unsplash.jpeg");
+  background-image: url(../images/dan-otis-OYFHT4X5isg-unsplash.jpeg);
   background-repeat: no-repeat;
   background-size: cover;
   padding: 3rem 3rem;
@@ -508,7 +508,7 @@ figcaption small {
 }
 
 .testimonials-section {
-  background-image: url("/images/testimonials_bg.jpg");
+  background-image: url(../images/testimonials_bg.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   border-radius: 5px;
@@ -812,6 +812,10 @@ section {
 }
 
 @media (max-width: 756px) {
+  section {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
   .hamburger-menu-icon {
     display: block;
   }
@@ -937,6 +941,10 @@ section {
   }
   .swiper-slide figcaption {
     left: 30%;
+  }
+  .swiper-slide:hover img {
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
   }
 }
 
