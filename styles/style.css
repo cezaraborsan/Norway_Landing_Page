@@ -103,7 +103,7 @@ h3 {
 h4 {
   font-size: clamp(0.8rem, 1.8vw, 1.5rem);
   color: #3d3d3d;
-  padding-bottom: 1rem;
+  padding-bottom: 0.2rem;
   font-weight: 500;
 }
 
@@ -173,6 +173,15 @@ label {
   font-weight: 500;
   letter-spacing: 3px;
   margin: 0;
+}
+
+.logo img {
+  max-width: 3rem;
+  opacity: 0.8;
+  margin-right: 0.4rem;
+  border: 4px solid white;
+  border-radius: 50%;
+  padding: 0.4rem;
 }
 
 .bar {
@@ -430,6 +439,10 @@ figcaption small {
   border-radius: 5px;
 }
 
+.city-rating {
+  padding-bottom: 1.5rem;
+}
+
 .city-rating span {
   font-size: clamp(0.7rem, 1.5vw, 1.1rem);
   opacity: 0.8;
@@ -610,6 +623,7 @@ figcaption small {
   border: 1px solid rgba(0, 0, 0, 0.4);
   padding: 1rem;
   border-radius: 5px;
+  color: black;
 }
 
 .newsletter-button {
@@ -654,9 +668,10 @@ figcaption small {
 }
 
 .footer-logo img {
+  max-width: 5rem;
   background-color: black;
-  padding: 7px 0px 7px 7px;
-  border-radius: 50px;
+  padding: 0.8rem;
+  border-radius: 50%;
 }
 
 .email {
@@ -844,6 +859,7 @@ section {
     transition: -webkit-transform 0.5s ease-in-out;
     transition: transform 0.5s ease-in-out;
     transition: transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
+    overflow: scroll;
   }
   nav ul {
     -webkit-box-orient: vertical;
