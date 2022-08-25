@@ -52,11 +52,11 @@ button {
 }
 
 section {
-  padding: 5rem 0;
+  padding: 4rem 0;
 }
 
 footer {
-  padding-bottom: 5rem;
+  padding-bottom: 4rem;
 }
 
 .aboutus-section,
@@ -139,7 +139,7 @@ label {
 // Hero Content Wrapper
 .hero {
   color: white;
-  background-image: url(../images/dan-otis-OYFHT4X5isg-unsplash.jpeg);
+  background-image: url(../images/Hero-bg.jpeg);
   background-repeat: no-repeat;
   background-size: cover;
   padding: 3rem 3rem;
@@ -314,18 +314,23 @@ nav {
 // Swiper slide - for each a text on picture with position absolute.
 // When hover make the text bigger and add blur on image
 
-figcaption {
-  text-align: left;
-  font-size: 1.2rem;
-  font-weight: 500;
+.swiper-slide {
+  position: relative;
+  text-align: center;
   color: white;
+}
+
+figcaption {
+  font-size: 1.5rem;
+  font-weight: 500;
   position: absolute;
-  bottom: 1.5rem;
-  left: 20%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   line-height: 0.8;
   opacity: 0;
   small {
-    font-size: 0.8rem;
+    font-size: 1rem;
     font-weight: 400;
   }
 }
@@ -334,7 +339,6 @@ figcaption {
   max-width: 250px;
   height: 400px;
   border-radius: 5px;
-  position: relative;
   cursor: pointer;
 }
 
@@ -344,12 +348,7 @@ figcaption {
 
 .swiper-slide:hover {
   figcaption {
-    font-size: 1.5rem;
     opacity: 1;
-
-    small {
-      font-size: 1rem;
-    }
   }
 
   img {
@@ -711,8 +710,6 @@ section {
   .about-info {
     gap: 1.5rem;
   }
-
-  //Swiper/Slider section
 }
 
 //For screens with max width 1000px
@@ -797,7 +794,7 @@ section {
   }
 }
 
-@media (max-width: 756px) {
+@media (max-width: 768px) {
   section {
     transform: translateY(0px);
   }
@@ -901,7 +898,7 @@ section {
   }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 576px) {
   // Newsletter section
   .newsletter-input {
     min-width: 55vw;
@@ -910,24 +907,6 @@ section {
     display: block;
     width: 100%;
     margin-top: 0.5rem;
-  }
-
-  // Swiper
-
-  section {
-    padding: 4rem 0;
-  }
-
-  .swiper-slide {
-    figcaption {
-      left: 30%;
-    }
-  }
-
-  .swiper-slide:hover {
-    img {
-      filter: blur(0px);
-    }
   }
 }
 

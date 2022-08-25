@@ -54,19 +54,19 @@ const swiper = new Swiper(".swiper", {
   breakpoints: {
     480: {
       slidesPerView: 1,
-      spaceBetween: 20,
+      spaceBetween: 0,
     },
     576: {
       slidesPerView: 2,
-      spaceBetween: 20,
+      spaceBetween: 0,
     },
     768: {
       slidesPerView: 3,
-      spaceBetween: 20,
+      spaceBetween: 0,
     },
     1200: {
       slidesPerView: 5,
-      spaceBetween: 20,
+      spaceBetween: 0,
     },
   },
   navigation: {

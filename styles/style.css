@@ -49,11 +49,11 @@ button:active {
 }
 
 section {
-  padding: 5rem 0;
+  padding: 4rem 0;
 }
 
 footer {
-  padding-bottom: 5rem;
+  padding-bottom: 4rem;
 }
 
 .aboutus-section,
@@ -134,7 +134,7 @@ label {
 
 .hero {
   color: white;
-  background-image: url(../images/dan-otis-OYFHT4X5isg-unsplash.jpeg);
+  background-image: url(../images/Hero-bg.jpeg);
   background-repeat: no-repeat;
   background-size: cover;
   padding: 3rem 3rem;
@@ -310,20 +310,26 @@ nav ul a:hover, nav ul a:active {
   text-align: center;
 }
 
-figcaption {
-  text-align: left;
-  font-size: 1.2rem;
-  font-weight: 500;
+.swiper-slide {
+  position: relative;
+  text-align: center;
   color: white;
+}
+
+figcaption {
+  font-size: 1.5rem;
+  font-weight: 500;
   position: absolute;
-  bottom: 1.5rem;
-  left: 20%;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   line-height: 0.8;
   opacity: 0;
 }
 
 figcaption small {
-  font-size: 0.8rem;
+  font-size: 1rem;
   font-weight: 400;
 }
 
@@ -331,7 +337,6 @@ figcaption small {
   max-width: 250px;
   height: 400px;
   border-radius: 5px;
-  position: relative;
   cursor: pointer;
 }
 
@@ -341,12 +346,7 @@ figcaption small {
 }
 
 .swiper-slide:hover figcaption {
-  font-size: 1.5rem;
   opacity: 1;
-}
-
-.swiper-slide:hover figcaption small {
-  font-size: 1rem;
 }
 
 .swiper-slide:hover img {
@@ -811,7 +811,7 @@ section {
   }
 }
 
-@media (max-width: 756px) {
+@media (max-width: 768px) {
   section {
     -webkit-transform: translateY(0px);
             transform: translateY(0px);
@@ -927,7 +927,7 @@ section {
   }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 576px) {
   .newsletter-input {
     min-width: 55vw;
   }
@@ -935,16 +935,6 @@ section {
     display: block;
     width: 100%;
     margin-top: 0.5rem;
-  }
-  section {
-    padding: 4rem 0;
-  }
-  .swiper-slide figcaption {
-    left: 30%;
-  }
-  .swiper-slide:hover img {
-    -webkit-filter: blur(0px);
-            filter: blur(0px);
   }
 }
 
