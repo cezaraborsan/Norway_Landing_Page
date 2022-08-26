@@ -49,7 +49,7 @@ button:active {
 }
 
 section {
-  padding: 4rem 0;
+  padding: 3.5rem 0;
 }
 
 footer {
@@ -115,7 +115,7 @@ h5 {
 
 .section-title {
   text-align: center;
-  padding-bottom: 4rem;
+  padding-bottom: 3rem;
 }
 
 .section-title p {
@@ -964,6 +964,16 @@ section {
 @media (max-height: 650px) {
   .hero {
     height: auto;
+  }
+}
+
+@media (max-height: 480px) {
+  figcaption {
+    opacity: 1;
+  }
+  .swiper-slide:hover img {
+    -webkit-filter: blur(0);
+            filter: blur(0);
   }
 }
 /*# sourceMappingURL=style.css.map */

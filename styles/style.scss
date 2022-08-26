@@ -52,7 +52,7 @@ button {
 }
 
 section {
-  padding: 4rem 0;
+  padding: 3.5rem 0;
 }
 
 footer {
@@ -116,7 +116,7 @@ h5 {
 
 .section-title {
   text-align: center;
-  padding-bottom: 4rem;
+  padding-bottom: 3rem;
 
   p {
     text-transform: uppercase;
@@ -939,5 +939,19 @@ section {
   //Hero section
   .hero {
     height: auto;
+  }
+}
+
+@media (max-height: 480px) {
+  //Slider / Swiper
+
+  figcaption {
+    opacity: 1;
+  }
+
+  .swiper-slide:hover {
+    img {
+      filter: blur(0);
+    }
   }
 }
