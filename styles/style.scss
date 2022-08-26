@@ -116,7 +116,7 @@ h5 {
 
 .section-title {
   text-align: center;
-  padding-bottom: 3rem;
+  padding-bottom: 2.5rem;
 
   p {
     text-transform: uppercase;
@@ -282,7 +282,6 @@ nav {
   justify-content: center;
   align-items: center;
   gap: 60px;
-  padding-top: 5rem;
   cursor: pointer;
 
   .destination {
@@ -679,6 +678,7 @@ footer a {
 .up {
   color: black;
   padding: 1rem;
+  float: right;
   svg {
     width: 3.5rem;
     transform: rotate(180deg);
@@ -741,7 +741,6 @@ section {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    padding-top: 2rem;
 
     .destination {
       text-align: left;

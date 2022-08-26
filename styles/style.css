@@ -115,7 +115,7 @@ h5 {
 
 .section-title {
   text-align: center;
-  padding-bottom: 3rem;
+  padding-bottom: 2.5rem;
 }
 
 .section-title p {
@@ -279,7 +279,6 @@ nav ul a:hover, nav ul a:active {
       -ms-flex-align: center;
           align-items: center;
   gap: 60px;
-  padding-top: 5rem;
   cursor: pointer;
 }
 
@@ -707,6 +706,7 @@ footer a {
 .up {
   color: black;
   padding: 1rem;
+  float: right;
 }
 
 .up svg {
@@ -775,7 +775,6 @@ section {
         -ms-flex-direction: column;
             flex-direction: column;
     gap: 10px;
-    padding-top: 2rem;
   }
   .hero-destinations .destination {
     text-align: left;
