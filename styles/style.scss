@@ -921,6 +921,18 @@ section {
     width: 100%;
     margin-top: 0.5rem;
   }
+
+  //Slider / Swiper
+
+  figcaption {
+    opacity: 1;
+  }
+
+  .swiper-slide:hover {
+    img {
+      filter: blur(0);
+    }
+  }
 }
 
 @media (max-height: 650px) {
