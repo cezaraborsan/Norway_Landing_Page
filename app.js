@@ -8,6 +8,18 @@ const slider = document.querySelector("slider");
 const prevButton = document.querySelector(".prev");
 const nextButton = document.querySelector(".next");
 const sections = document.querySelectorAll("section");
+const dateInput = document.querySelector(".date-input");
+
+const date = new Date();
+let day = date.getDate();
+let month = date.getMonth() + 1;
+const year = date.getFullYear();
+
+if (month < 10) month = "0" + month;
+if (day < 10) day = "0" + day;
+
+const today = year + "-" + month + "-" + day;
+dateInput.value = today;
 
 // On load scroll on top
 
