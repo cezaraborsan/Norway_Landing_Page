@@ -89,24 +89,24 @@ const swiper = new Swiper(".swiper", {
 
 // // Intersection Observer, section pop up when scoll into view
 
-const options = {
-  rootMargin: "-150px 0px",
+const elements = document.querySelectorAll("section");
+const callback = (str) => {
+  console.log(str);
 };
+const observer = new IntersectionObserver(handleIntersection);
 
-const translateOnScroll = new IntersectionObserver(function (
-  entries,
-  translateOnScroll
-) {
+elements.forEach((obs) => {
+  observer.observe(obs);
+});
+
+function handleIntersection(entries, observer) {
   entries.forEach((entry) => {
-    if (!entry.isIntersecting) {
-      return;
-    } else {
+    if (entry.intersectionRatio > 0) {
+      callback("observer-" + entry.target.getAttribute(".translate"));
       entry.target.classList.add("visible");
+      observer.unobserve(entry.target);
+    } else {
+      entry.target.classList.remove("visible");
     }
   });
-},
-options);
-
-sections.forEach((section) => {
-  translateOnScroll.observe(section);
-});
+}

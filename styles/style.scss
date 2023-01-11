@@ -14,15 +14,16 @@ body {
   font-family: "Albert Sans", sans-serif;
   font-size: clamp(0.8rem, 1.17vw, 0.9rem);
   height: 100vh;
-}
-
-// Hide the scrollbars
-body::-webkit-scrollbar {
-  display: none;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  position: relative;
 }
 
 .container {
-  width: clamp(16rem, 100vw, 137rem);
+  width: 100%;
+  max-width: 1700px;
+  min-width: 375px;
+  margin: 0px auto;
 }
 
 //Components
@@ -62,7 +63,8 @@ footer {
 .aboutus-section,
 .booking-section,
 .parteners-section,
-.newsletter-section {
+.newsletter-section,
+.testimonials-section {
   max-width: 80%;
   margin: 0 auto;
 }
@@ -137,17 +139,34 @@ label {
 
 // Hero Section
 // Hero Content Wrapper
+
 .hero {
   color: white;
-  background-image: url(../images/Hero-bg.jpeg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  padding: 3rem;
   height: 100vh !important;
   margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 20%;
+
+  .hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    height: 100vh;
+    width: 100vw;
+    z-index: -9999;
+  }
 }
 
 //Navbar
+
+header {
+  padding: 2rem 3rem;
+  color: white;
+}
 
 .navbar {
   display: flex;
@@ -163,6 +182,7 @@ label {
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  color: white;
 
   .logo-text {
     font-weight: 500;
@@ -451,21 +471,43 @@ figcaption {
 
 .booking-form {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
+  justify-content: center;
+  gap: 1rem;
   padding-top: 1rem;
 
   .input-filed {
     input,
     select {
-      display: inline-block;
       background: none;
       border: 1px solid rgba(54, 54, 54, 0.2);
       font-size: 1rem;
       padding: 20px;
       border-radius: 10px;
-      min-width: 15vw;
+      text-align: left;
+      color: #3d3d3d;
     }
+
+    select {
+      -moz-appearance: none; /* Firefox */
+      -webkit-appearance: none; /* Safari and Chrome */
+      appearance: none;
+      background: transparent;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cg%3E%3Cpath fill='none' d='M0 0h24v24H0z'/%3E%3Cpath d='M12 14l-4-4h8z'/%3E%3C/g%3E%3C/svg%3E ");
+      background-repeat: no-repeat;
+      background-position-x: 100%;
+      background-position-y: 5px;
+      padding-right: 2rem;
+    }
+  }
+
+  input,
+  select,
+  button {
+    max-width: 25rem;
+    width: 50vw;
+    min-width: 16rem;
   }
 }
 
@@ -475,7 +517,6 @@ figcaption {
   border: none;
   color: white;
   padding: 20px 10px;
-  width: 10vw;
   font-size: 1.1rem;
   border-radius: 10px;
 }
@@ -512,73 +553,70 @@ figcaption {
 
 // Testimonials section
 
-// Added on the entire section a bg-image and an overlay to make the image darker
 .testimonials-section {
-  background-image: url(../images/testimonials_bg.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  border-radius: 5px;
-  position: relative;
-  z-index: 2;
+  // Displayed the testimonials wrapper flex to have all the testimonials in row
+  // next step: add a swiper/slider with more testimonials
 
-  .bg-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    background-color: rgba(0, 0, 0, 0.4);
-    height: 100%;
-    width: 100%;
-    z-index: -2;
+  .testimonials-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.5rem;
+
+    .testimonial {
+      margin: 0 2rem;
+      color: white;
+
+      .testimonial-text {
+        margin-bottom: 1.5rem;
+        border-radius: 1rem;
+        background: rgb(74, 101, 131);
+        background: linear-gradient(
+          140deg,
+          rgba(74, 101, 131, 0.8) 19%,
+          rgba(108, 128, 148, 0.8) 83%
+        );
+        padding: 1rem 2rem;
+        max-width: 22rem;
+        font-style: italic;
+
+        &::before {
+          content: url(../images/quote-right-svgrepo-com.svg);
+          display: block;
+          opacity: 0.9;
+        }
+
+        &::-webkit-scrollbar {
+          display: none;
+        }
+      }
+
+      .user-info {
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        gap: 1rem;
+        font-size: 1.1rem;
+        font-weight: 700;
+        color: #3d3d3d;
+        margin-bottom: 1rem;
+
+        span {
+          font-size: 0.8rem;
+          opacity: 0.8;
+          font-weight: 700;
+        }
+
+        .user-pic {
+          border: 3px solid rgb(240, 240, 240);
+          border-radius: 50%;
+          width: 75px;
+        }
+      }
+    }
   }
 }
-
-// Displayed the testimonials wrapper flex to have all the testimonials in row
-// next step: add a swiper/slider with more testimonials
-
-.testimonials-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 3rem;
-  padding: 0 6rem;
-}
-
-.user-pic {
-  max-width: clamp(3.5rem, 4vw, 5.7rem);
-  border-radius: 100%;
-}
-
-.testimonial {
-  padding: 6rem 0;
-  margin: 0 2rem;
-}
-
-.testimonial-text {
-  background-color: white;
-  border-radius: 1rem;
-  padding: 2.2rem;
-  margin: 1.5rem 0;
-  min-width: 200px;
-}
-
-.user-info {
-  display: flex;
-  justify-content: left;
-  align-items: center;
-  gap: 1rem;
-  color: white;
-  font-size: clamp(0.7rem, 3vw, 1.1rem);
-  font-weight: 700;
-
-  span {
-    font-size: clamp(0.5rem, 1.4vw, 0.8rem);
-    opacity: 0.8;
-    font-weight: 700;
-  }
-}
-
 //Newsletter section
 
 .newsletter-section {
@@ -620,6 +658,8 @@ figcaption {
   display: flex;
   justify-content: space-evenly;
   color: black;
+  max-width: 1700px;
+  margin: 0 auto;
 }
 
 // footer logo, used the same logo from navbar,
@@ -722,12 +762,25 @@ section {
   .about-info {
     gap: 1.5rem;
   }
+
+  //testimonials section
+  .testimonials-section {
+    .testimonials-wrapper {
+      flex-direction: column;
+      .testimonial {
+        .user-info {
+          margin-bottom: 1.1rem;
+        }
+      }
+    }
+  }
 }
 
 //For screens with max width 1000px
 
 @media (max-width: 1000px) {
   // Hero section
+
   .hero-title {
     padding: 5rem 1rem;
     h1 {
@@ -737,57 +790,20 @@ section {
     }
   }
 
+  .hero {
+    justify-content: start;
+  }
+
   .hero-destinations {
     display: flex;
     flex-direction: column;
+
     gap: 10px;
 
     .destination {
       text-align: left;
       width: 220px;
     }
-  }
-
-  .testimonial {
-    padding: 0;
-    margin: 0 2rem;
-  }
-
-  // Navbar
-
-  // Booking section
-
-  .booking-form {
-    flex-direction: column;
-
-    .input-filed {
-      input,
-      select {
-        display: block;
-        width: 70vw;
-      }
-    }
-
-    .booking-search-btn {
-      display: block;
-      width: 70vw;
-    }
-  }
-
-  // Partners section
-  .testimonials-wrapper {
-    flex-direction: column;
-    gap: 0;
-    padding: 0;
-  }
-
-  .testimonial {
-    padding: 0;
-    margin: 0 2rem;
-  }
-
-  .testimonial-text {
-    max-width: 400px;
   }
 
   //Newsletter section

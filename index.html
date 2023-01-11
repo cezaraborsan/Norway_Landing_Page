@@ -24,59 +24,61 @@
   </head>
   <body>
     <div class="container">
-      <div class="hero">
-        <header class="navbar">
-          <div class="logo">
-            <img
-              src="images\travelx-logo.svg"
-              alt="travel logo"
-              class="navbar-logo"
-            />
-            <p class="logo-text">TRAVELx</p>
-          </div>
+      <header class="navbar">
+        <a class="logo" href="#">
+          <img
+            src="images\travelx-logo.svg"
+            alt="travel logo"
+            class="navbar-logo"
+          />
+          <p class="logo-text">TRAVELx</p>
+        </a>
 
-          <nav>
-            <div class="open-menu-links">
-              <img src="images\close.png" alt="x icon" class="close" />
-              <ul class="menu-list">
-                <li class="menu-item">
-                  <a class="menu-link" href="#">Destinations</a>
-                </li>
-                <li class="menu-item">
-                  <a class="menu-link" href="#">Activities</a>
-                </li>
-                <li class="menu-item">
-                  <a class="menu-link" href="#">About Us</a>
-                </li>
-                <li class="menu-item">
-                  <a class="menu-link" href="#">Contact</a>
-                </li>
-              </ul>
-            </div>
-
-            <ul class="contact-list-open-menu">
-              <li class="contact-item">
-                <img src="images\Location-icon.svg" alt="location" />
-                <address>Bjørnhullvegen 25,3917 Oslo,Norway</address>
+        <nav>
+          <div class="open-menu-links">
+            <img src="images\close.png" alt="x icon" class="close" />
+            <ul class="menu-list">
+              <li class="menu-item">
+                <a class="menu-link">Destinations</a>
               </li>
-              <li class="contact-item">
-                <img src="images\Email-icon.svg" alt="email" class="email" />
-                <p>example@&#8203;travelx.com</p>
+              <li class="menu-item">
+                <a class="menu-link">Activities</a>
               </li>
-              <li class="contact-item">
-                <img src="images\Phone-icon.svg" alt="phone" />
-                <p>+47-455-547-34</p>
+              <li class="menu-item">
+                <a class="menu-link">About Us</a>
+              </li>
+              <li class="menu-item">
+                <a class="menu-link">Contact</a>
               </li>
             </ul>
-          </nav>
-
-          <div class="hamburger-menu-icon">
-            <span class="bar bar--1"></span>
-            <span class="bar bar--2"></span>
-            <span class="bar bar--3"></span>
           </div>
-          <div class="menu-open-overlay"></div>
-        </header>
+
+          <ul class="contact-list-open-menu">
+            <li class="contact-item">
+              <img src="images\Location-icon.svg" alt="location" />
+              <address>Bjørnhullvegen 25,3917 Oslo,Norway</address>
+            </li>
+            <li class="contact-item">
+              <img src="images\Email-icon.svg" alt="email" class="email" />
+              <p>example@&#8203;travelx.com</p>
+            </li>
+            <li class="contact-item">
+              <img src="images\Phone-icon.svg" alt="phone" />
+              <p>+47-455-547-34</p>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="hamburger-menu-icon">
+          <span class="bar bar--1"></span>
+          <span class="bar bar--2"></span>
+          <span class="bar bar--3"></span>
+        </div>
+        <div class="menu-open-overlay"></div>
+      </header>
+
+      <div class="hero">
+        <img class="hero-bg" src="../images/Hero-bg.jpeg" alt="forest" />
 
         <div class="hero-title">
           <p class="small-title">EXPLORE</p>
@@ -332,7 +334,7 @@
           </div>
           <div>
             <label class="hide">Search</label>
-            <button type="submit" class="booking-search-btn">Search</button>
+            <button class="booking-search-btn">Search</button>
           </div>
         </form>
       </section>
@@ -370,7 +372,6 @@
         <div class="testimonials-wrapper">
           <div class="testimonial">
             <p class="testimonial-text">
-              <img src="images\“.png" alt="quotemarks" /> <br />
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse
               natus eligendi dolores error ipsum consequuntur neque, unde atque
               autem distinctio doloremque similique illum?
@@ -386,7 +387,6 @@
           </div>
           <div class="testimonial">
             <p class="testimonial-text">
-              <img src="images\“.png" alt="quotemarks" /> <br />
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse
               natus eligendi dolores error ipsum consequuntur neque, unde atque
               autem distinctio doloremque similique illum?
@@ -401,11 +401,11 @@
             </div>
           </div>
           <div class="testimonial">
+            <div class="wave"></div>
             <p class="testimonial-text">
-              <img src="images\“.png" alt="quotemarks" /> <br />
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa
               inventore facere soluta ab dignissimos molestiae commodi quas
-              dolores veniam asperiores?
+              dolores veniam asperiores? Lorem, ipsum dolor.
             </p>
             <div class="user-info">
               <img
@@ -417,7 +417,6 @@
             </div>
           </div>
         </div>
-        <div class="bg-overlay"></div>
       </section>
 
       <section class="newsletter-section">
@@ -434,81 +433,80 @@
             placeholder="Email Address"
             class="newsletter-input"
           />
-          <button type="submit" class="newsletter-button">Submit</button>
+          <button class="newsletter-button">Submit</button>
         </form>
       </section>
+    </div>
+    <footer>
+      <div class="footer-logo">
+        <img src="images\travelx-logo.svg" alt="travel logo" />
+        <p class="logo-text">TRAVELx</p>
+      </div>
+      <div class="footer-content">
+        <div class="social-media">
+          <h5 class="footer-subtitle">Social Media</h5>
 
-      <footer>
-        <div class="footer-logo">
-          <img src="images\travelx-logo.svg" alt="travel logo" />
-          <p class="logo-text">TRAVELx</p>
+          <ul class="social-links">
+            <li>
+              <a href="#"
+                ><img src="images\Linkedin-icon.svg" alt="linkedin logo"
+              /></a>
+            </li>
+            <li>
+              <a href="#"
+                ><img src="images\Instagram-icon.svg" alt="instagram logo"
+              /></a>
+            </li>
+            <li>
+              <a href="#"
+                ><img src="images\Facebook-icon.svg" alt="facebook logo"
+              /></a>
+            </li>
+            <li>
+              <a href="#"
+                ><img src="images\Twitter-icon.svg" alt="twitter logo"
+              /></a>
+            </li>
+          </ul>
         </div>
-        <div class="footer-content">
-          <div class="social-media">
-            <h5 class="footer-subtitle">Social Media</h5>
 
-            <ul class="social-links">
-              <li>
-                <a href="#"
-                  ><img src="images\Linkedin-icon.svg" alt="linkedin logo"
-                /></a>
-              </li>
-              <li>
-                <a href="#"
-                  ><img src="images\Instagram-icon.svg" alt="instagram logo"
-                /></a>
-              </li>
-              <li>
-                <a href="#"
-                  ><img src="images\Facebook-icon.svg" alt="facebook logo"
-                /></a>
-              </li>
-              <li>
-                <a href="#"
-                  ><img src="images\Twitter-icon.svg" alt="twitter logo"
-                /></a>
-              </li>
-            </ul>
-          </div>
-
-          <div class="information">
-            <h5 class="footer-subtitle">Information</h5>
-            <ul>
-              <li><a href="#">FAQ</a></li>
-              <li><a href="#">Newsletter</a></li>
-              <li><a href="#">Privacy Policy</a></li>
-              <li><a href="#">Legal Notice</a></li>
-            </ul>
-          </div>
-
-          <div class="quick-links">
-            <h5 class="footer-subtitle">Quick Links</h5>
-            <ul>
-              <li><a href="#">Wishlist</a></li>
-              <li><a href="#">Search for flights</a></li>
-              <li><a href="#">Search for accommodation</a></li>
-            </ul>
-          </div>
-
-          <div class="contactus">
-            <h5 class="footer-subtitle">Contact Us</h5>
-            <ul class="contact-list">
-              <li class="contact-item">
-                <img src="images\Location-icon.svg" alt="location" />
-                <address>Bjørnhullvegen 25,3917 Oslo,Norway</address>
-              </li>
-              <li class="contact-item">
-                <img src="images\Email-icon.svg" alt="email" class="email" />
-                <p>example@travelx.com</p>
-              </li>
-              <li class="contact-item">
-                <img src="images\Phone-icon.svg" alt="phone" />
-                <p>+47-455-547-34</p>
-              </li>
-            </ul>
-          </div>
+        <div class="information">
+          <h5 class="footer-subtitle">Information</h5>
+          <ul>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Newsletter</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Legal Notice</a></li>
+          </ul>
         </div>
-      </footer>
+
+        <div class="quick-links">
+          <h5 class="footer-subtitle">Quick Links</h5>
+          <ul>
+            <li><a href="#">Wishlist</a></li>
+            <li><a href="#">Search for flights</a></li>
+            <li><a href="#">Search for accommodation</a></li>
+          </ul>
+        </div>
+
+        <div class="contactus">
+          <h5 class="footer-subtitle">Contact Us</h5>
+          <ul class="contact-list">
+            <li class="contact-item">
+              <img src="images\Location-icon.svg" alt="location" />
+              <address>Bjørnhullvegen 25,3917 Oslo,Norway</address>
+            </li>
+            <li class="contact-item">
+              <img src="images\Email-icon.svg" alt="email" class="email" />
+              <p>example@travelx.com</p>
+            </li>
+            <li class="contact-item">
+              <img src="images\Phone-icon.svg" alt="phone" />
+              <p>+47-455-547-34</p>
+            </li>
+          </ul>
+        </div>
+      </div>
       <div>
         <a href="#" class="up">
           <svg
@@ -534,7 +532,7 @@
           </svg>
         </a>
       </div>
-    </div>
+    </footer>
   </body>
   <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
   <script src="app.js" defer="defer"></script>
