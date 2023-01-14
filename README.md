@@ -11,8 +11,8 @@ Screenshots
 
 Desktop
 
-![alt text](../images/Travel-Landing-Page-mobile.png)
+![desktop](images/Travel-Landing-Page-mobile.png)
 
 Mobile
 
-![alt text](../images/Travel-Landing-Page-mobile.png)
+![mobile](images/Travel-Landing-Page-mobile.png)
