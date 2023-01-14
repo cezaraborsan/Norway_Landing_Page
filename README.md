@@ -9,10 +9,10 @@ I decided to make this a travel page, but it can be modified and used for other 
 
 Screenshots
 
-Desktop
+Desktop Design                                                        Mobile Design
 
-![desktop](images/Travel-Landing-Page-mobile.png)
+![desktop](images/Travel-Landing-Page-mobile.png)                     ![mobile](images/Travel-Landing-Page-mobile.png)
 
-Mobile
 
-![mobile](images/Travel-Landing-Page-mobile.png)
+
+
