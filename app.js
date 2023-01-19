@@ -110,3 +110,19 @@ function handleIntersection(entries, observer) {
     }
   });
 }
+
+//LOADER
+
+const loaderWrapper = document.querySelector(".loader-wrapper");
+const loaderAnimation = document.querySelector(".loader");
+const body = document.querySelector("body");
+
+window.onload = (event) => {
+  setTimeout(fadeOut, 2000);
+};
+
+function fadeOut() {
+  body.style.overflowY = "scroll";
+  loaderWrapper.style.opacity = "0";
+  loaderWrapper.style.zIndex = "-9999";
+}
