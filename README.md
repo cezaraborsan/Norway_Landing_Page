@@ -1,7 +1,7 @@
 TRAVELx Landing Page
 
-I created this landing page using HTML, CSS, SASS and a little bit of JavaScript.
-The UI inspiration comes from a project found on Figma Community (https://www.figma.com/file/VHzI6vlD3QaxmLxaEJ4xy3/Travel-Landing-Page-Free-Community).
+This landing page was designed and built as part of my portfolio using HTML, CSS, SASS, and JavaScript. The design was inspired by a project I found on Figma Community(https://www.figma.com/file/VHzI6vlD3QaxmLxaEJ4xy3/Travel-Landing-Page-Free-Community), and I made it my own with a flexible approach to the layout and content.
 
-This project is among the first projects I worked on using SASS.
-I used the Swiper library for the slider in the project, because it seems very important to me to be as familiar as possible with libraries that can be helpful for future projects, and Swiper is one of these libraries. This is a travel landing page, but it can be modified and used for other domains as well due to the flexible design approach.
+As one of my first projects using SASS, I wanted to challenge myself and push my skills further. I also used the Swiper library for the slider, which allowed me to gain experience with a useful tool for future projects.
+
+While the landing page was designed for a travel website, it can easily be modified for other domains due to its adaptable design. This project not only showcases my technical abilities but also my creativity and attention to detail. I hope you enjoy exploring it as much as I enjoyed building it.

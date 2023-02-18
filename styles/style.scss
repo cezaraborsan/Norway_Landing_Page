@@ -14,25 +14,22 @@ body {
   font-family: "Albert Sans", sans-serif;
   font-size: clamp(0.8rem, 1.17vw, 0.9rem);
   height: 100vh;
-  overflow-y: hidden;
-  overflow-x: hidden;
+  overflow: hidden;
   position: relative;
 }
 
 .container {
-  width: 100%;
   max-width: 1700px;
   min-width: 375px;
-  margin: 0px auto;
+  margin: 0 auto;
+  width: 100%;
 }
 
 //Components
 
-ul {
-  list-style: none;
-}
-
+ul,
 a {
+  list-style: none;
   text-decoration: none;
   cursor: pointer;
 }
@@ -146,7 +143,6 @@ label {
   align-items: center;
   justify-content: center;
   background-color: #ffffff;
-
   position: fixed;
   z-index: 999999;
   opacity: 1;
